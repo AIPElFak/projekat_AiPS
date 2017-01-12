@@ -17,15 +17,16 @@ namespace Sah
         {
             InitializeComponent();
             //Figura.Instance();
-            pB1.Image = Image.FromFile("pion.png");
-            pB2.Image = Image.FromFile("pion.png");
-            pB3.Image = Image.FromFile("pion.png");
-            pB4.Image = Image.FromFile("pion.png");
-            pB5.Image = Image.FromFile("pion.png");
-            pB6.Image = Image.FromFile("pion.png");
-            pB7.Image = Image.FromFile("pion.png");
-            pB8.Image = Image.FromFile("pion.png");
-            tB1.Image = Image.FromFile("top.png");
+            //pB1.Image = Image.FromFile("pion.png");
+            pB1.Image = Properties.Resources.pion;
+            pB2.Image = Properties.Resources.pion;
+            pB3.Image = Properties.Resources.pion;
+            pB4.Image = Properties.Resources.pion;
+            pB5.Image = Properties.Resources.pion;
+            pB6.Image = Properties.Resources.pion;
+            pB7.Image = Properties.Resources.pion;
+            pB8.Image = Properties.Resources.pion;
+            tB1.Image = Properties.Resources.top;
             //pB1.Location = new Point(60, 420);
             //pB1.Location = new Point(f.kolonaZaFiguru("pB1"), f.vrstaZaFiguru("pB1"));
             //pB2.Location = new Point(120, 420);
@@ -36,14 +37,14 @@ namespace Sah
             //pB7.Location = new Point(420, 420);
             //pB8.Location = new Point(480, 420);
 
-            pC1.Image = Image.FromFile("pionc.png");
-            pC2.Image = Image.FromFile("pionc.png");
-            pC3.Image = Image.FromFile("pionc.png");
-            pC4.Image = Image.FromFile("pionc.png");
-            pC5.Image = Image.FromFile("pionc.png");
-            pC6.Image = Image.FromFile("pionc.png");
-            pC7.Image = Image.FromFile("pionc.png");
-            pC8.Image = Image.FromFile("pionc.png");
+            pC1.Image = Properties.Resources.pionc;
+            pC2.Image = Properties.Resources.pionc;
+            pC3.Image = Properties.Resources.pionc;
+            pC4.Image = Properties.Resources.pionc;
+            pC5.Image = Properties.Resources.pionc;
+            pC6.Image = Properties.Resources.pionc;
+            pC7.Image = Properties.Resources.pionc;
+            pC8.Image = Properties.Resources.pionc;
             //pC1.Location = new Point(60, 120);
             //pC2.Location = new Point(120, 120);
             //pC3.Location = new Point(180, 120);
