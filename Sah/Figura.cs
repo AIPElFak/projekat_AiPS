@@ -12,7 +12,7 @@ namespace Sah
         int kolona, vrsta;
         string figura;
         string[,] pozicija = new string[9, 9];
-        private Figura()
+        public Figura()
         {
             pozicija[8, 4] = "pB1";
             pozicija[2, 2] = "pB2";
@@ -22,6 +22,8 @@ namespace Sah
             pozicija[6, 2] = "pB6";
             pozicija[4, 6] = "pB7";
             pozicija[8, 2] = "pB8";
+            pozicija[1, 1] = "tB1";
+
             pozicija[1, 7] = "pC1";
             pozicija[3, 5] = "pC2";
             pozicija[3, 1] = "pC3";
@@ -49,10 +51,10 @@ namespace Sah
                 {
                     if (pozicija[a, b] == s)
                     {
-                        return a*60;
+                        return a * 60;
                     }
-                   // else
-                        //return 0;
+                    // else
+                    //return 0;
                 }
             }
             return 1000;
@@ -65,10 +67,10 @@ namespace Sah
                 {
                     if (pozicija[a, b] == s)
                     {
-                        return (9- b)*60;
+                        return (9 - b) * 60;
                     }
                     //else
-                       // return 1000;
+                    // return 1000;
                 }
             }
             return 1000;
@@ -153,11 +155,40 @@ namespace Sah
 
                 else return "0";
             }
-            else
-                return "0";
+            else if (figura == "tB1")
+            {
+                Top t = new Top();
+                if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
+                {
+                    return figura;
+                }
+                else if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
+                {
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
+                        return "pC1";  //ako je figutra napadnuta
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
+                        return "pC2";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
+                        return "pC3";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
+                        return "pC4";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
+                        return "pC5";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
+                        return "pC6";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
+                        return "pC7";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
+                        return "pC8";
+                    else return "0";
+                }
+
+                else return "0";
+            }
+            else return "0";
         }
 
-        public string createMatrix(int l, int m)
+        public string vratiFiguru(int l, int m)
         {
             for (int a = 0; a < 9; a++)
             {

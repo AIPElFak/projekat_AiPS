@@ -16,9 +16,7 @@ namespace Sah
         public Sah()
         {
             InitializeComponent();
-
-            Figura.Instance();
-
+            //Figura.Instance();
             pB1.Image = Image.FromFile("pion.png");
             pB2.Image = Image.FromFile("pion.png");
             pB3.Image = Image.FromFile("pion.png");
@@ -27,6 +25,7 @@ namespace Sah
             pB6.Image = Image.FromFile("pion.png");
             pB7.Image = Image.FromFile("pion.png");
             pB8.Image = Image.FromFile("pion.png");
+            tB1.Image = Image.FromFile("top.png");
             //pB1.Location = new Point(60, 420);
             //pB1.Location = new Point(f.kolonaZaFiguru("pB1"), f.vrstaZaFiguru("pB1"));
             //pB2.Location = new Point(120, 420);
@@ -59,7 +58,6 @@ namespace Sah
 
         private void Sah_Paint(object sender, PaintEventArgs e)
         {
-           
             Graphics o = CreateGraphics();
             Brush black = new SolidBrush(Color.Black);
             Brush red = new SolidBrush(Color.Yellow);
@@ -83,73 +81,74 @@ namespace Sah
                         o.FillRectangle(red, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
                 }
             }
-            pB1.Location = new Point(f.kolonaZaFiguru("pB1"), f.vrstaZaFiguru("pB1"));
-            pB2.Location = new Point(f.kolonaZaFiguru("pB2"), f.vrstaZaFiguru("pB2"));
-            pB3.Location = new Point(f.kolonaZaFiguru("pB3"), f.vrstaZaFiguru("pB3"));
-            pB4.Location = new Point(f.kolonaZaFiguru("pB4"), f.vrstaZaFiguru("pB4"));
-            pB5.Location = new Point(f.kolonaZaFiguru("pB5"), f.vrstaZaFiguru("pB5"));
-            pB6.Location = new Point(f.kolonaZaFiguru("pB6"), f.vrstaZaFiguru("pB6"));
-            pB7.Location = new Point(f.kolonaZaFiguru("pB7"), f.vrstaZaFiguru("pB7"));
-            pB8.Location = new Point(f.kolonaZaFiguru("pB8"), f.vrstaZaFiguru("pB8"));
-            pC1.Location = new Point(f.kolonaZaFiguru("pC1"), f.vrstaZaFiguru("pC1"));
-            pC2.Location = new Point(f.kolonaZaFiguru("pC2"), f.vrstaZaFiguru("pC2"));
-            pC3.Location = new Point(f.kolonaZaFiguru("pC3"), f.vrstaZaFiguru("pC3"));
-            pC4.Location = new Point(f.kolonaZaFiguru("pC4"), f.vrstaZaFiguru("pC4"));
-            pC5.Location = new Point(f.kolonaZaFiguru("pC5"), f.vrstaZaFiguru("pC5"));
-            pC6.Location = new Point(f.kolonaZaFiguru("pC6"), f.vrstaZaFiguru("pC6"));
-            pC7.Location = new Point(f.kolonaZaFiguru("pC7"), f.vrstaZaFiguru("pC7"));
-            pC8.Location = new Point(f.kolonaZaFiguru("pC8"), f.vrstaZaFiguru("pC8"));
+            pB1.Location = new Point(Figura.Instance().kolonaZaFiguru("pB1"), Figura.Instance().vrstaZaFiguru("pB1"));
+            pB2.Location = new Point(Figura.Instance().kolonaZaFiguru("pB2"), Figura.Instance().vrstaZaFiguru("pB2"));
+            pB3.Location = new Point(Figura.Instance().kolonaZaFiguru("pB3"), Figura.Instance().vrstaZaFiguru("pB3"));
+            pB4.Location = new Point(Figura.Instance().kolonaZaFiguru("pB4"), Figura.Instance().vrstaZaFiguru("pB4"));
+            pB5.Location = new Point(Figura.Instance().kolonaZaFiguru("pB5"), Figura.Instance().vrstaZaFiguru("pB5"));
+            pB6.Location = new Point(Figura.Instance().kolonaZaFiguru("pB6"), Figura.Instance().vrstaZaFiguru("pB6"));
+            pB7.Location = new Point(Figura.Instance().kolonaZaFiguru("pB7"), Figura.Instance().vrstaZaFiguru("pB7"));
+            pB8.Location = new Point(Figura.Instance().kolonaZaFiguru("pB8"), Figura.Instance().vrstaZaFiguru("pB8"));
+            tB1.Location = new Point(Figura.Instance().kolonaZaFiguru("tB1"), Figura.Instance().vrstaZaFiguru("tB1"));
+            pC1.Location = new Point(Figura.Instance().kolonaZaFiguru("pC1"), Figura.Instance().vrstaZaFiguru("pC1"));
+            pC2.Location = new Point(Figura.Instance().kolonaZaFiguru("pC2"), Figura.Instance().vrstaZaFiguru("pC2"));
+            pC3.Location = new Point(Figura.Instance().kolonaZaFiguru("pC3"), Figura.Instance().vrstaZaFiguru("pC3"));
+            pC4.Location = new Point(Figura.Instance().kolonaZaFiguru("pC4"), Figura.Instance().vrstaZaFiguru("pC4"));
+            pC5.Location = new Point(Figura.Instance().kolonaZaFiguru("pC5"), Figura.Instance().vrstaZaFiguru("pC5"));
+            pC6.Location = new Point(Figura.Instance().kolonaZaFiguru("pC6"), Figura.Instance().vrstaZaFiguru("pC6"));
+            pC7.Location = new Point(Figura.Instance().kolonaZaFiguru("pC7"), Figura.Instance().vrstaZaFiguru("pC7"));
+            pC8.Location = new Point(Figura.Instance().kolonaZaFiguru("pC8"), Figura.Instance().vrstaZaFiguru("pC8"));
         }
         
         int brojKlika = 1;
         String prvaFigura;
-        static Figura f = new Figura();
+        
         private void Sah_MouseClick(object sender, MouseEventArgs e)
         {
             base.OnMouseMove(e);
             int brojKolone, brojVrste;
             brojKolone = (e.X) / 60;
             brojVrste = 8 - e.Y / 60 + 1;
-            label1.Text=f.createMatrix(brojKolone,brojVrste);
+            label1.Text= Figura.Instance().vratiFiguru(brojKolone,brojVrste);
             if(brojKolone<1 || brojKolone>8 || brojVrste<1 || brojVrste>8)
                 Console.WriteLine("greska");
             else if (brojKlika == 1)
             {
-                prvaFigura = f.nazivFigure(brojKolone, brojVrste, f.createMatrix(brojKolone, brojVrste));
-                if (f.createMatrix(brojKolone, brojVrste) == "pB1" || f.createMatrix(brojKolone, brojVrste) == "pB6" || f.createMatrix(brojKolone, brojVrste) == "pB7" ||
-                    f.createMatrix(brojKolone, brojVrste) == "pB2" || f.createMatrix(brojKolone, brojVrste) == "pB5" || f.createMatrix(brojKolone, brojVrste) == "pB8" ||
-                    f.createMatrix(brojKolone, brojVrste) == "pB3" || f.createMatrix(brojKolone, brojVrste) == "pB4" )
+                prvaFigura = Figura.Instance().nazivFigure(brojKolone, brojVrste, Figura.Instance().vratiFiguru(brojKolone, brojVrste));
+                if (Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB1" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB6" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB7" ||
+                    Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB2" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB5" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB8" ||
+                    Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB3" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pB4" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "tB1")
                 {
                     brojKlika=2;
                 }
             }
             else if (brojKlika == 2)
             {
-                if (f.odrediFiguru(brojKolone, brojVrste) == "pB1" || f.odrediFiguru(brojKolone, brojVrste) == "pB2" || f.odrediFiguru(brojKolone, brojVrste) == "pB3"
-                    || f.odrediFiguru(brojKolone, brojVrste) == "pB4" || f.odrediFiguru(brojKolone, brojVrste) == "pB5" || f.odrediFiguru(brojKolone, brojVrste) == "pB6"
-                    || f.odrediFiguru(brojKolone, brojVrste) == "pB7" || f.odrediFiguru(brojKolone, brojVrste) == "pB8")
+                if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB1"    || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB2" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB3"
+                    || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB4" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB5" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB6"
+                    || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB7" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB8" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "tB1")
                 {
-                    ((PictureBox)this.Controls[f.odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
-                    f.zameni(f.staraKolona(), f.staraVrsta(), brojKolone, brojVrste);
+                    ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
+                    Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                     brojKlika = 3;
                 }
 
                 // NAPADANJE FIGURA
                 else
                 if (prvaFigura != null && (prvaFigura == "pB1" || prvaFigura == "pB2" || prvaFigura == "pB3" || prvaFigura == "pB4" ||
-                    prvaFigura == "pB4" || prvaFigura == "pB5" || prvaFigura == "pB6" || prvaFigura == "pB7" || prvaFigura == "pB8"))
+                    prvaFigura == "pB4" || prvaFigura == "pB5" || prvaFigura == "pB6" || prvaFigura == "pB7" || prvaFigura == "pB8" || prvaFigura == "tB1"))
                 {
-                    if (f.odrediFiguru(brojKolone, brojVrste) != null && (f.odrediFiguru(brojKolone, brojVrste) == "pC1" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pC2" || f.odrediFiguru(brojKolone, brojVrste) == "pC6" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pC3" || f.odrediFiguru(brojKolone, brojVrste) == "pC7" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pC4" || f.odrediFiguru(brojKolone, brojVrste) == "pC8" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pC5"))
+                    if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) != null && (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC1" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC2" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC6" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC3" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC7" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC4" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC8" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC5"))
                     {
                         try
                         {
-                            ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[f.odrediFiguru(brojKolone, brojVrste)]).Location;
-                            ((PictureBox)this.Controls[f.odrediFiguru(brojKolone, brojVrste)]).Visible = false;
-                            f.zameni(f.staraKolona(), f.staraVrsta(), brojKolone, brojVrste);
+                            ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location;
+                            ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Visible = false;
+                            Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                             brojKlika = 3;
                         }
                         catch { }
@@ -160,10 +159,10 @@ namespace Sah
 
             else if (brojKlika == 3)
             {
-                prvaFigura = f.nazivFigure(brojKolone, brojVrste, f.createMatrix(brojKolone, brojVrste));
-                if (f.createMatrix(brojKolone, brojVrste) == "pC1" || f.createMatrix(brojKolone, brojVrste) == "pC6" || f.createMatrix(brojKolone, brojVrste) == "pC7" ||
-                    f.createMatrix(brojKolone, brojVrste) == "pC2" || f.createMatrix(brojKolone, brojVrste) == "pC5" || f.createMatrix(brojKolone, brojVrste) == "pC8" ||
-                    f.createMatrix(brojKolone, brojVrste) == "pC3" || f.createMatrix(brojKolone, brojVrste) == "pC4")
+                prvaFigura = Figura.Instance().nazivFigure(brojKolone, brojVrste, Figura.Instance().vratiFiguru(brojKolone, brojVrste));
+                if (Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC1" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC6" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC7" ||
+                    Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC2" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC5" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC8" ||
+                    Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC3" || Figura.Instance().vratiFiguru(brojKolone, brojVrste) == "pC4")
                 {
                     brojKlika = 4;
                 }
@@ -171,12 +170,12 @@ namespace Sah
 
             else if(brojKlika==4)
             {
-                if (f.odrediFiguru(brojKolone, brojVrste) == "pC1" || f.odrediFiguru(brojKolone, brojVrste) == "pC2" || f.odrediFiguru(brojKolone, brojVrste) == "pC3"
-                   || f.odrediFiguru(brojKolone, brojVrste) == "pC4" || f.odrediFiguru(brojKolone, brojVrste) == "pC5" || f.odrediFiguru(brojKolone, brojVrste) == "pC6"
-                   || f.odrediFiguru(brojKolone, brojVrste) == "pC7" || f.odrediFiguru(brojKolone, brojVrste) == "pC8")
+                if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC1" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC2" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC3"
+                   || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC4" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC5" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC6"
+                   || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC7" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pC8")
                 {
-                    ((PictureBox)this.Controls[f.odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
-                    f.zameni(f.staraKolona(), f.staraVrsta(), brojKolone, brojVrste);
+                    ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
+                    Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                     brojKlika = 1;
                 }
 
@@ -185,17 +184,17 @@ namespace Sah
                if (prvaFigura != null && (prvaFigura == "pC1" || prvaFigura == "pC2" || prvaFigura == "pC3" || prvaFigura == "pC4" ||
                    prvaFigura == "pC4" || prvaFigura == "pC5" || prvaFigura == "pC6" || prvaFigura == "pC7" || prvaFigura == "pC8"))
                 {
-                    if (f.odrediFiguru(brojKolone, brojVrste) != null && (f.odrediFiguru(brojKolone, brojVrste) == "pB1" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pB2" || f.odrediFiguru(brojKolone, brojVrste) == "pB6" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pB3" || f.odrediFiguru(brojKolone, brojVrste) == "pB7" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pB4" || f.odrediFiguru(brojKolone, brojVrste) == "pB8" ||
-                        f.odrediFiguru(brojKolone, brojVrste) == "pB5"))
+                    if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) != null && (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB1" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB2" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB6" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB3" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB7" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB4" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB8" ||
+                        Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "pB5" || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "tB1"))
                     {
                         try
                         {
-                            ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[f.odrediFiguru(brojKolone, brojVrste)]).Location;
-                            ((PictureBox)this.Controls[f.odrediFiguru(brojKolone, brojVrste)]).Visible = false;
-                            f.zameni(f.staraKolona(), f.staraVrsta(), brojKolone, brojVrste);
+                            ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location;
+                            ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Visible = false;
+                            Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                             //f.zameni(brojKolone, brojVrste, 0, 1);
                             brojKlika = 1;
                         }

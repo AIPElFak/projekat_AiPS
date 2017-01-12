@@ -45,6 +45,7 @@
             this.pC4 = new System.Windows.Forms.PictureBox();
             this.pC3 = new System.Windows.Forms.PictureBox();
             this.pC2 = new System.Windows.Forms.PictureBox();
+            this.tB1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB3)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pC4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pC3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB1)).BeginInit();
             this.SuspendLayout();
             // 
             // pB1
@@ -216,11 +218,21 @@
             this.pC2.TabIndex = 16;
             this.pC2.TabStop = false;
             // 
+            // tB1
+            // 
+            this.tB1.Enabled = false;
+            this.tB1.Location = new System.Drawing.Point(26, 299);
+            this.tB1.Name = "tB1";
+            this.tB1.Size = new System.Drawing.Size(60, 60);
+            this.tB1.TabIndex = 17;
+            this.tB1.TabStop = false;
+            // 
             // Sah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.tB1);
             this.Controls.Add(this.pC2);
             this.Controls.Add(this.pC3);
             this.Controls.Add(this.pC4);
@@ -261,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pC4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pC3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +298,7 @@
         private System.Windows.Forms.PictureBox pC4;
         private System.Windows.Forms.PictureBox pC3;
         private System.Windows.Forms.PictureBox pC2;
+        private System.Windows.Forms.PictureBox tB1;
     }
 }
 

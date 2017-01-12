@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Top.cs" />
     <EmbeddedResource Include="Sah.resx">
       <DependentUpon>Sah.cs</DependentUpon>
     </EmbeddedResource>
