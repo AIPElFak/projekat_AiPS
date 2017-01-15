@@ -46,6 +46,9 @@
             this.pC3 = new System.Windows.Forms.PictureBox();
             this.pC2 = new System.Windows.Forms.PictureBox();
             this.tB1 = new System.Windows.Forms.PictureBox();
+            this.tB2 = new System.Windows.Forms.PictureBox();
+            this.tC1 = new System.Windows.Forms.PictureBox();
+            this.tC2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB3)).BeginInit();
@@ -63,6 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pC3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pC2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tC2)).BeginInit();
             this.SuspendLayout();
             // 
             // pB1
@@ -149,7 +155,7 @@
             // pC1
             // 
             this.pC1.Enabled = false;
-            this.pC1.Location = new System.Drawing.Point(26, 108);
+            this.pC1.Location = new System.Drawing.Point(26, 92);
             this.pC1.Name = "pC1";
             this.pC1.Size = new System.Drawing.Size(60, 60);
             this.pC1.TabIndex = 9;
@@ -158,7 +164,7 @@
             // pC8
             // 
             this.pC8.Enabled = false;
-            this.pC8.Location = new System.Drawing.Point(629, 108);
+            this.pC8.Location = new System.Drawing.Point(629, 92);
             this.pC8.Name = "pC8";
             this.pC8.Size = new System.Drawing.Size(60, 60);
             this.pC8.TabIndex = 10;
@@ -167,7 +173,7 @@
             // pC7
             // 
             this.pC7.Enabled = false;
-            this.pC7.Location = new System.Drawing.Point(538, 108);
+            this.pC7.Location = new System.Drawing.Point(538, 92);
             this.pC7.Name = "pC7";
             this.pC7.Size = new System.Drawing.Size(60, 60);
             this.pC7.TabIndex = 11;
@@ -176,7 +182,7 @@
             // pC6
             // 
             this.pC6.Enabled = false;
-            this.pC6.Location = new System.Drawing.Point(456, 108);
+            this.pC6.Location = new System.Drawing.Point(456, 92);
             this.pC6.Name = "pC6";
             this.pC6.Size = new System.Drawing.Size(60, 60);
             this.pC6.TabIndex = 12;
@@ -185,7 +191,7 @@
             // pC5
             // 
             this.pC5.Enabled = false;
-            this.pC5.Location = new System.Drawing.Point(372, 108);
+            this.pC5.Location = new System.Drawing.Point(372, 92);
             this.pC5.Name = "pC5";
             this.pC5.Size = new System.Drawing.Size(60, 60);
             this.pC5.TabIndex = 13;
@@ -194,7 +200,7 @@
             // pC4
             // 
             this.pC4.Enabled = false;
-            this.pC4.Location = new System.Drawing.Point(287, 108);
+            this.pC4.Location = new System.Drawing.Point(287, 92);
             this.pC4.Name = "pC4";
             this.pC4.Size = new System.Drawing.Size(60, 60);
             this.pC4.TabIndex = 14;
@@ -203,7 +209,7 @@
             // pC3
             // 
             this.pC3.Enabled = false;
-            this.pC3.Location = new System.Drawing.Point(199, 108);
+            this.pC3.Location = new System.Drawing.Point(199, 92);
             this.pC3.Name = "pC3";
             this.pC3.Size = new System.Drawing.Size(60, 60);
             this.pC3.TabIndex = 15;
@@ -212,7 +218,7 @@
             // pC2
             // 
             this.pC2.Enabled = false;
-            this.pC2.Location = new System.Drawing.Point(110, 108);
+            this.pC2.Location = new System.Drawing.Point(110, 92);
             this.pC2.Name = "pC2";
             this.pC2.Size = new System.Drawing.Size(60, 60);
             this.pC2.TabIndex = 16;
@@ -227,11 +233,41 @@
             this.tB1.TabIndex = 17;
             this.tB1.TabStop = false;
             // 
+            // tB2
+            // 
+            this.tB2.Enabled = false;
+            this.tB2.Location = new System.Drawing.Point(629, 299);
+            this.tB2.Name = "tB2";
+            this.tB2.Size = new System.Drawing.Size(60, 60);
+            this.tB2.TabIndex = 18;
+            this.tB2.TabStop = false;
+            // 
+            // tC1
+            // 
+            this.tC1.Enabled = false;
+            this.tC1.Location = new System.Drawing.Point(26, 12);
+            this.tC1.Name = "tC1";
+            this.tC1.Size = new System.Drawing.Size(60, 60);
+            this.tC1.TabIndex = 19;
+            this.tC1.TabStop = false;
+            // 
+            // tC2
+            // 
+            this.tC2.Enabled = false;
+            this.tC2.Location = new System.Drawing.Point(629, 12);
+            this.tC2.Name = "tC2";
+            this.tC2.Size = new System.Drawing.Size(60, 60);
+            this.tC2.TabIndex = 20;
+            this.tC2.TabStop = false;
+            // 
             // Sah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.tC2);
+            this.Controls.Add(this.tC1);
+            this.Controls.Add(this.tB2);
             this.Controls.Add(this.tB1);
             this.Controls.Add(this.pC2);
             this.Controls.Add(this.pC3);
@@ -274,6 +310,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pC3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pC2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tC2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,6 +338,9 @@
         private System.Windows.Forms.PictureBox pC3;
         private System.Windows.Forms.PictureBox pC2;
         private System.Windows.Forms.PictureBox tB1;
+        private System.Windows.Forms.PictureBox tB2;
+        private System.Windows.Forms.PictureBox tC1;
+        private System.Windows.Forms.PictureBox tC2;
     }
 }
 

@@ -23,6 +23,7 @@ namespace Sah
             pozicija[4, 6] = "pB7";
             pozicija[8, 2] = "pB8";
             pozicija[1, 1] = "tB1";
+            pozicija[8, 1] = "tB2";
 
             pozicija[1, 7] = "pC1";
             pozicija[3, 5] = "pC2";
@@ -32,6 +33,8 @@ namespace Sah
             pozicija[6, 7] = "pC6";
             pozicija[7, 7] = "pC7";
             pozicija[8, 7] = "pC8";
+            pozicija[1, 8] = "tC1";
+            pozicija[8, 8] = "tC2";
             pozicija[0, 0] = null;
         }
         public static Figura Instance()
@@ -42,7 +45,6 @@ namespace Sah
             }
             return instace;
         }
-
         public int kolonaZaFiguru(string s)
         {
             for (int a = 0; a < 9; a++)
@@ -119,6 +121,10 @@ namespace Sah
                         return "pC7";
                     if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
                         return "pC8";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
+                        return "tC1";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
+                        return "tC2";
                     else return "0";
                 }
 
@@ -150,12 +156,16 @@ namespace Sah
                         return "pB7";
                     if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
                         return "pB8";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
+                        return "tB1";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
+                        return "tB2";
                     else return "0";
                 }
 
                 else return "0";
             }
-            else if (figura == "tB1")
+            else if (figura == "tB1" || figura == "tB2")
             {
                 Top t = new Top();
                 if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
@@ -180,6 +190,44 @@ namespace Sah
                         return "pC7";
                     if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
                         return "pC8";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
+                        return "tC1";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
+                        return "tC2";
+                    else return "0";
+                }
+
+                else return "0";
+            }
+            else if (figura == "tC1" || figura == "tC2")
+            {
+                Top t = new Top();
+                if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
+                {
+                    return figura;
+                }
+                else if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
+                {
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
+                        return "pB1";  //ako je figutra napadnuta
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
+                        return "pB2";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
+                        return "pB3";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
+                        return "pB4";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
+                        return "pB5";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
+                        return "pB6";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
+                        return "pB7";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
+                        return "pB8";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
+                        return "tB1";
+                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
+                        return "tB2";
                     else return "0";
                 }
 
@@ -187,7 +235,6 @@ namespace Sah
             }
             else return "0";
         }
-
         public string vratiFiguru(int l, int m)
         {
             for (int a = 0; a < 9; a++)

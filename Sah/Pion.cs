@@ -23,7 +23,7 @@ namespace Sah
                 && napadnutaFigura != "pC1" && napadnutaFigura != "pC2"
                 && napadnutaFigura != "pC3" && napadnutaFigura != "pC4"
                 && napadnutaFigura != "pC5" && napadnutaFigura != "pC6"
-                && napadnutaFigura != "pC7" && napadnutaFigura != "pC8")
+                && napadnutaFigura != "pC7" && napadnutaFigura != "pC8" && napadnutaFigura != "tB1" && napadnutaFigura != "tB2")
             {
                 return 1;
             }
