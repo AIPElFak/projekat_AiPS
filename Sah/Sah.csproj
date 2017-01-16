@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Figura.cs" />
+    <Compile Include="Konj.cs" />
+    <Compile Include="Kralj.cs" />
+    <Compile Include="Lovac.cs" />
     <Compile Include="Pion.cs" />
     <Compile Include="PionC.cs" />
     <Compile Include="Tabla.cs">
@@ -101,6 +104,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\topc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\konj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\konjc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lovac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lovacc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kraljica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kraljicac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kralj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kraljc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

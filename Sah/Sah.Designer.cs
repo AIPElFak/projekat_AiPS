@@ -49,6 +49,18 @@
             this.tB2 = new System.Windows.Forms.PictureBox();
             this.tC1 = new System.Windows.Forms.PictureBox();
             this.tC2 = new System.Windows.Forms.PictureBox();
+            this.koB1 = new System.Windows.Forms.PictureBox();
+            this.koB2 = new System.Windows.Forms.PictureBox();
+            this.koC1 = new System.Windows.Forms.PictureBox();
+            this.koC2 = new System.Windows.Forms.PictureBox();
+            this.lB1 = new System.Windows.Forms.PictureBox();
+            this.lB2 = new System.Windows.Forms.PictureBox();
+            this.lC1 = new System.Windows.Forms.PictureBox();
+            this.lC2 = new System.Windows.Forms.PictureBox();
+            this.krB1 = new System.Windows.Forms.PictureBox();
+            this.krC1 = new System.Windows.Forms.PictureBox();
+            this.kB1 = new System.Windows.Forms.PictureBox();
+            this.kC1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB3)).BeginInit();
@@ -69,6 +81,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.tB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lC2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.krB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.krC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kC1)).BeginInit();
             this.SuspendLayout();
             // 
             // pB1
@@ -260,11 +284,131 @@
             this.tC2.TabIndex = 20;
             this.tC2.TabStop = false;
             // 
+            // koB1
+            // 
+            this.koB1.Enabled = false;
+            this.koB1.Location = new System.Drawing.Point(110, 299);
+            this.koB1.Name = "koB1";
+            this.koB1.Size = new System.Drawing.Size(60, 60);
+            this.koB1.TabIndex = 21;
+            this.koB1.TabStop = false;
+            // 
+            // koB2
+            // 
+            this.koB2.Enabled = false;
+            this.koB2.Location = new System.Drawing.Point(538, 299);
+            this.koB2.Name = "koB2";
+            this.koB2.Size = new System.Drawing.Size(60, 60);
+            this.koB2.TabIndex = 22;
+            this.koB2.TabStop = false;
+            // 
+            // koC1
+            // 
+            this.koC1.Enabled = false;
+            this.koC1.Location = new System.Drawing.Point(110, 12);
+            this.koC1.Name = "koC1";
+            this.koC1.Size = new System.Drawing.Size(60, 60);
+            this.koC1.TabIndex = 23;
+            this.koC1.TabStop = false;
+            // 
+            // koC2
+            // 
+            this.koC2.Enabled = false;
+            this.koC2.Location = new System.Drawing.Point(538, 12);
+            this.koC2.Name = "koC2";
+            this.koC2.Size = new System.Drawing.Size(60, 60);
+            this.koC2.TabIndex = 24;
+            this.koC2.TabStop = false;
+            // 
+            // lB1
+            // 
+            this.lB1.Enabled = false;
+            this.lB1.Location = new System.Drawing.Point(199, 299);
+            this.lB1.Name = "lB1";
+            this.lB1.Size = new System.Drawing.Size(60, 60);
+            this.lB1.TabIndex = 25;
+            this.lB1.TabStop = false;
+            // 
+            // lB2
+            // 
+            this.lB2.Enabled = false;
+            this.lB2.Location = new System.Drawing.Point(456, 299);
+            this.lB2.Name = "lB2";
+            this.lB2.Size = new System.Drawing.Size(60, 60);
+            this.lB2.TabIndex = 26;
+            this.lB2.TabStop = false;
+            // 
+            // lC1
+            // 
+            this.lC1.Enabled = false;
+            this.lC1.Location = new System.Drawing.Point(199, 12);
+            this.lC1.Name = "lC1";
+            this.lC1.Size = new System.Drawing.Size(60, 60);
+            this.lC1.TabIndex = 27;
+            this.lC1.TabStop = false;
+            // 
+            // lC2
+            // 
+            this.lC2.Enabled = false;
+            this.lC2.Location = new System.Drawing.Point(456, 12);
+            this.lC2.Name = "lC2";
+            this.lC2.Size = new System.Drawing.Size(60, 60);
+            this.lC2.TabIndex = 28;
+            this.lC2.TabStop = false;
+            // 
+            // krB1
+            // 
+            this.krB1.Enabled = false;
+            this.krB1.Location = new System.Drawing.Point(287, 300);
+            this.krB1.Name = "krB1";
+            this.krB1.Size = new System.Drawing.Size(60, 59);
+            this.krB1.TabIndex = 29;
+            this.krB1.TabStop = false;
+            // 
+            // krC1
+            // 
+            this.krC1.Enabled = false;
+            this.krC1.Location = new System.Drawing.Point(287, 12);
+            this.krC1.Name = "krC1";
+            this.krC1.Size = new System.Drawing.Size(60, 60);
+            this.krC1.TabIndex = 30;
+            this.krC1.TabStop = false;
+            // 
+            // kB1
+            // 
+            this.kB1.Enabled = false;
+            this.kB1.Location = new System.Drawing.Point(372, 300);
+            this.kB1.Name = "kB1";
+            this.kB1.Size = new System.Drawing.Size(60, 59);
+            this.kB1.TabIndex = 31;
+            this.kB1.TabStop = false;
+            // 
+            // kC1
+            // 
+            this.kC1.Enabled = false;
+            this.kC1.Location = new System.Drawing.Point(372, 12);
+            this.kC1.Name = "kC1";
+            this.kC1.Size = new System.Drawing.Size(60, 60);
+            this.kC1.TabIndex = 32;
+            this.kC1.TabStop = false;
+            // 
             // Sah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.kC1);
+            this.Controls.Add(this.kB1);
+            this.Controls.Add(this.krC1);
+            this.Controls.Add(this.krB1);
+            this.Controls.Add(this.lC2);
+            this.Controls.Add(this.lC1);
+            this.Controls.Add(this.lB2);
+            this.Controls.Add(this.lB1);
+            this.Controls.Add(this.koC2);
+            this.Controls.Add(this.koC1);
+            this.Controls.Add(this.koB2);
+            this.Controls.Add(this.koB1);
             this.Controls.Add(this.tC2);
             this.Controls.Add(this.tC1);
             this.Controls.Add(this.tB2);
@@ -313,6 +457,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.tB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.koC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lC2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.krB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.krC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kC1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +497,18 @@
         private System.Windows.Forms.PictureBox tB2;
         private System.Windows.Forms.PictureBox tC1;
         private System.Windows.Forms.PictureBox tC2;
+        private System.Windows.Forms.PictureBox koB1;
+        private System.Windows.Forms.PictureBox koB2;
+        private System.Windows.Forms.PictureBox koC1;
+        private System.Windows.Forms.PictureBox koC2;
+        private System.Windows.Forms.PictureBox lB1;
+        private System.Windows.Forms.PictureBox lB2;
+        private System.Windows.Forms.PictureBox lC1;
+        private System.Windows.Forms.PictureBox lC2;
+        private System.Windows.Forms.PictureBox krB1;
+        private System.Windows.Forms.PictureBox krC1;
+        private System.Windows.Forms.PictureBox kB1;
+        private System.Windows.Forms.PictureBox kC1;
     }
 }
 
