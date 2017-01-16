@@ -73,6 +73,81 @@ namespace Sah
             }
             return 1000;
         }
+
+        public string rtrnValC(int kliknutaDrugaKolona, int kliknutaDrugaVrsta)
+        {
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
+                return "pC1";  //ako je figutra napadnuta
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
+                return "pC2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
+                return "pC3";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
+                return "pC4";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
+                return "pC5";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
+                return "pC6";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
+                return "pC7";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
+                return "pC8";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
+                return "tC1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
+                return "tC2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
+                return "koC1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
+                return "koC2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
+                return "lC1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
+                return "lC2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
+                return "krC1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
+                return "kC1";
+            else return "0";
+        }
+
+        public string rtrnValB(int kliknutaDrugaKolona, int kliknutaDrugaVrsta)
+        {
+
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
+                return "pB1";  //ako je figutra napadnuta
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
+                return "pB2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
+                return "pB3";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
+                return "pB4";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
+                return "pB5";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
+                return "pB6";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
+                return "pB7";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
+                return "pB8";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
+                return "tB1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
+                return "tB2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
+                return "koB1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
+                return "koB2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
+                return "lB1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
+                return "lB2";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
+                return "krB1";
+            if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
+                return "kB1";
+            else return "0";
+        }
         public int vrstaZaFiguru(string s)
         {
             for (int a = 0; a < 9; a++)
@@ -117,39 +192,7 @@ namespace Sah
                 }
                 else if (p.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
-                        return "pC1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
-                        return "pC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
-                        return "pC3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
-                        return "pC4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
-                        return "pC5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
-                        return "pC6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
-                        return "pC7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
-                        return "pC8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
-                        return "tC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
-                        return "tC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
-                        return "koC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
-                        return "koC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
-                        return "lC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
-                        return "lC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
-                        return "krC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
-                        return "kC1";
-                    else return "0";
+                    return rtrnValC(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
 
                 else return "0";
@@ -164,39 +207,7 @@ namespace Sah
                 }
                 else if (p.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
-                        return "pB1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
-                        return "pB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
-                        return "pB3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
-                        return "pB4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
-                        return "pB5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
-                        return "pB6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
-                        return "pB7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
-                        return "pB8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
-                        return "tB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
-                        return "tB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
-                        return "koB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
-                        return "koB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
-                        return "lB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
-                        return "lB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
-                        return "krB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
-                        return "kB1";
-                    else return "0";
+                    return rtrnValB(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
 
                 else return "0";
@@ -210,39 +221,7 @@ namespace Sah
                 }
                 else if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
-                        return "pC1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
-                        return "pC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
-                        return "pC3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
-                        return "pC4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
-                        return "pC5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
-                        return "pC6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
-                        return "pC7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
-                        return "pC8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
-                        return "tC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
-                        return "tC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
-                        return "koC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
-                        return "koC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
-                        return "lC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
-                        return "lC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
-                        return "krC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
-                        return "kC1";
-                    else return "0";
+                    return rtrnValC(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
 
                 else return "0";
@@ -256,39 +235,7 @@ namespace Sah
                 }
                 else if (t.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
-                        return "pB1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
-                        return "pB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
-                        return "pB3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
-                        return "pB4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
-                        return "pB5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
-                        return "pB6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
-                        return "pB7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
-                        return "pB8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
-                        return "tB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
-                        return "tB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
-                        return "koB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
-                        return "koB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
-                        return "lB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
-                        return "lB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
-                        return "krB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
-                        return "kB1";
-                    else return "0";
+                    return rtrnValB(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -301,39 +248,7 @@ namespace Sah
                 }
                 else if (ko.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
-                        return "pC1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
-                        return "pC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
-                        return "pC3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
-                        return "pC4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
-                        return "pC5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
-                        return "pC6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
-                        return "pC7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
-                        return "pC8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
-                        return "tC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
-                        return "tC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
-                        return "koC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
-                        return "koC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
-                        return "lC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
-                        return "lC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
-                        return "krC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
-                        return "kC1";
-                    else return "0";
+                    return rtrnValC(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
 
                 else return "0";
@@ -347,39 +262,7 @@ namespace Sah
                 }
                 else if (ko.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
-                        return "pB1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
-                        return "pB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
-                        return "pB3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
-                        return "pB4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
-                        return "pB5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
-                        return "pB6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
-                        return "pB7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
-                        return "pB8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
-                        return "tB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
-                        return "tB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
-                        return "koB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
-                        return "koB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
-                        return "lB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
-                        return "lB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
-                        return "krB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
-                        return "kB1";
-                    else return "0";
+                    return rtrnValB(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -392,39 +275,7 @@ namespace Sah
                 }
                 else if (l.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
-                        return "pC1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
-                        return "pC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
-                        return "pC3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
-                        return "pC4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
-                        return "pC5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
-                        return "pC6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
-                        return "pC7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
-                        return "pC8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
-                        return "tC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
-                        return "tC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
-                        return "koC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
-                        return "koC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
-                        return "lC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
-                        return "lC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
-                        return "krC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
-                        return "kC1";
-                    else return "0";
+                    return rtrnValC(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -437,39 +288,7 @@ namespace Sah
                 }
                 else if (l.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
-                        return "pB1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
-                        return "pB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
-                        return "pB3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
-                        return "pB4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
-                        return "pB5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
-                        return "pB6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
-                        return "pB7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
-                        return "pB8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
-                        return "tB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
-                        return "tB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
-                        return "koB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
-                        return "koB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
-                        return "lB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
-                        return "lB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
-                        return "krB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
-                        return "kB1";
-                    else return "0";
+                    return rtrnValB(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -485,39 +304,7 @@ namespace Sah
                 else if (lk.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2 ||
                     tk.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
-                        return "pC1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
-                        return "pC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
-                        return "pC3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
-                        return "pC4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
-                        return "pC5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
-                        return "pC6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
-                        return "pC7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
-                        return "pC8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
-                        return "tC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
-                        return "tC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
-                        return "koC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
-                        return "koC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
-                        return "lC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
-                        return "lC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
-                        return "krC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
-                        return "kC1";
-                    else return "0";
+                    return rtrnValC(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -533,39 +320,7 @@ namespace Sah
                 else if (lk.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2 ||
                     tk.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
-                        return "pB1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
-                        return "pB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
-                        return "pB3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
-                        return "pB4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
-                        return "pB5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
-                        return "pB6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
-                        return "pB7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
-                        return "pB8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
-                        return "tB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
-                        return "tB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
-                        return "koB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
-                        return "koB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
-                        return "lB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
-                        return "lB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
-                        return "krB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
-                        return "kB1";
-                    else return "0";
+                    return rtrnValB(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -578,39 +333,7 @@ namespace Sah
                 }
                 else if (k.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC1")  // pC1 je napadnuta
-                        return "pC1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC2")
-                        return "pC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC3")
-                        return "pC3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC4")
-                        return "pC4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC5")
-                        return "pC5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC6")
-                        return "pC6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC7")
-                        return "pC7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pC8")
-                        return "pC8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC1")
-                        return "tC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tC2")
-                        return "tC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC1")
-                        return "koC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koC2")
-                        return "koC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC1")
-                        return "lC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lC2")
-                        return "lC2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krC1")
-                        return "krC1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kC1")
-                        return "kC1";
-                    else return "0";
+                    return rtrnValC(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
@@ -623,39 +346,7 @@ namespace Sah
                 }
                 else if (k.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 2)
                 {
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB1")  // pC1 je napadnuta
-                        return "pB1";  //ako je figutra napadnuta
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB2")
-                        return "pB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB3")
-                        return "pB3";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB4")
-                        return "pB4";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB5")
-                        return "pB5";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB6")
-                        return "pB6";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB7")
-                        return "pB7";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "pB8")
-                        return "pB8";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB1")
-                        return "tB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "tB2")
-                        return "tB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB1")
-                        return "koB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "koB2")
-                        return "koB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB1")
-                        return "lB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "lB2")
-                        return "lB2";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "krB1")
-                        return "krB1";
-                    if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "kB1")
-                        return "kB1";
-                    else return "0";
+                    return rtrnValB(kliknutaDrugaKolona, kliknutaDrugaVrsta);
                 }
                 else return "0";
             }
