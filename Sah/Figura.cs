@@ -110,7 +110,6 @@ namespace Sah
                 return "kC1";
             else return "0";
         }
-
         public string rtrnValB(int kliknutaDrugaKolona, int kliknutaDrugaVrsta)
         {
 
@@ -148,6 +147,7 @@ namespace Sah
                 return "kB1";
             else return "0";
         }
+
         public int vrstaZaFiguru(string s)
         {
             for (int a = 0; a < 9; a++)
@@ -370,6 +370,38 @@ namespace Sah
         {
             pozicija[novaKolona, novaVrsta] = pozicija[staraKolona, staraVrsta];
             pozicija[staraKolona, staraVrsta] = pozicija[0, 0];
+        }
+        public int napadnutBeliKralj( int brojKolone, int brojVrste)
+        {
+            for(int i=1; i<9; i++)
+            {
+                for(int j=1; j<8; j++)
+                {
+                    if (pozicija[i, j] == "kB1")
+                    {
+                        if (pozicija[staraKolona(), staraVrsta()] == "kB1")
+                        {
+                            return nevalidanBeliPotezZaKralja(brojKolone, brojVrste);
+                        }
+                        else return nevalidanBeliPotezZaKralja(i, j);
+                    }
+                }
+            }
+            return 1;
+        }
+        public int nevalidanBeliPotezZaKralja(int k, int v)
+        {
+            if (pozicija[k + 1, v + 1] == "pC1" || pozicija[k - 1, v + 1] == "pC1" || pozicija[k + 1, v + 1] == "pC2" || pozicija[k - 1, v + 1] == "pC2" ||
+                pozicija[k + 1, v + 1] == "pC3" || pozicija[k - 1, v + 1] == "pC3" || pozicija[k + 1, v + 1] == "pC4" || pozicija[k - 1, v + 1] == "pC4" ||
+                pozicija[k + 1, v + 1] == "pC5" || pozicija[k - 1, v + 1] == "pC5" || pozicija[k + 1, v + 1] == "pC6" || pozicija[k - 1, v + 1] == "pC6" ||
+                pozicija[k + 1, v + 1] == "pC7" || pozicija[k - 1, v + 1] == "pC7" || pozicija[k + 1, v + 1] == "pC8" || pozicija[k - 1, v + 1] == "pC8")
+                return 0;
+            else if (pozicija[Math.Abs(k - 2), v - 1] == "koC1" || pozicija[Math.Abs(k - 2), v - 1] == "koC2" || pozicija[Math.Abs(k - 2), v + 1] == "koC1" || pozicija[Math.Abs(k - 2), v + 1] == "koC2" || pozicija[k - 1, Math.Abs(v - 2)] == "koC1" ||
+                pozicija[k - 1, Math.Abs(v - 2)] == "koC2" || pozicija[k - 1, v + 2] == "koC1" || pozicija[k - 1, v + 2] == "koC2" || pozicija[k + 1, Math.Abs(v - 2)] == "koC1" || pozicija[k + 1, Math.Abs(v - 2)] == "koC2" ||
+                pozicija[k + 1, v + 2] == "koC1" || pozicija[k + 1, v + 2] == "koC2" || pozicija[k + 2, v - 1] == "koC1" || pozicija[k + 2, v - 1] == "koC2" || pozicija[k + 2, v + 1] == "koC1" ||
+                pozicija[k + 2, v + 1] == "koC2")
+                return 0;
+            else return 1;
         }
     }
 }

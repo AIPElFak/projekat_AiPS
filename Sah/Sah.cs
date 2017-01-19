@@ -146,9 +146,13 @@ namespace Sah
                     || Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "kB1")
 
                 {
-                    ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
-                    Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
-                    brojKlika = 3;
+                    if (Figura.Instance().napadnutBeliKralj(brojKolone, brojVrste) == 1)
+                    {
+                        ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
+                        Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
+                        brojKlika = 3;
+                    }
+                    else brojKlika = 1;
                 // NAPADANJE FIGURA
                 }
 
@@ -170,10 +174,14 @@ namespace Sah
                     {
                         try
                         {
-                            ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location;
-                            ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Visible = false;
-                            Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
-                            brojKlika = 3;
+                            if (Figura.Instance().napadnutBeliKralj(brojKolone, brojVrste) == 1)
+                            {
+                                ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location;
+                                ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Visible = false;
+                                Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
+                                brojKlika = 3;
+                            }
+                            else brojKlika = 1;
                         }
                         catch { }
                     }
