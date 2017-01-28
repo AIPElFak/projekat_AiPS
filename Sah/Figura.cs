@@ -11,7 +11,7 @@ namespace Sah
         static Figura instace;
         int kolona, vrsta;
         string figura;
-        string[,] pozicija = new string[9, 9];
+        string[,] pozicija = new string[11, 11];
         public Figura()
         {
             pozicija[1, 2] = "pB1";
@@ -371,24 +371,45 @@ namespace Sah
             pozicija[novaKolona, novaVrsta] = pozicija[staraKolona, staraVrsta];
             pozicija[staraKolona, staraVrsta] = pozicija[0, 0];
         }
+        public void vratiZamenu(int staraKolona, int staraVrsta, int novaKolona, int novaVrsta)
+        {
+            pozicija[staraKolona, staraVrsta] = pozicija[novaKolona, novaVrsta];
+            pozicija[novaKolona, novaVrsta] = pozicija[0, 0];
+        }
         public int napadnutBeliKralj( int brojKolone, int brojVrste)
         {
-            for(int i=1; i<9; i++)
-            {
-                for(int j=1; j<8; j++)
+            
+                for (int i = 1; i < 9; i++)
                 {
-                    if (pozicija[i, j] == "kB1")
+                    for (int j = 1; j < 9; j++)
                     {
-                        if (pozicija[staraKolona(), staraVrsta()] == "kB1")
+                        if (pozicija[i, j] == "kB1")
                         {
-                            return nevalidanBeliPotezZaKralja(brojKolone, brojVrste);
+                            if (pozicija[staraKolona(), staraVrsta()] == "kB1")
+                            {
+                                return nevalidanBeliPotezZaKralja(brojKolone, brojVrste);
+                            }
+                             else
+                            {
+                                zameni(staraKolona(), staraVrsta(), brojKolone, brojVrste);
+                                if (nevalidanBeliPotezZaKralja(i,j) == 0)
+                                 {
+                                 vratiZamenu(staraKolona(), staraVrsta(), brojKolone, brojVrste);
+                                 return 0;
+                                 }
+                                 else
+                                 {
+                                        vratiZamenu(staraKolona(), staraVrsta(), brojKolone, brojVrste);
+                                         return 1;
+                                 }
+                            //return nevalidanBeliPotezZaKralja(i, j);
+                             }
                         }
-                        else return nevalidanBeliPotezZaKralja(i, j);
                     }
                 }
+                return 1;
             }
-            return 1;
-        }
+
         public int nevalidanBeliPotezZaKralja(int k, int v)
         {
             if (pozicija[k + 1, v + 1] == "pC1" || pozicija[k - 1, v + 1] == "pC1" || pozicija[k + 1, v + 1] == "pC2" || pozicija[k - 1, v + 1] == "pC2" ||
@@ -401,7 +422,60 @@ namespace Sah
                 pozicija[k + 1, v + 2] == "koC1" || pozicija[k + 1, v + 2] == "koC2" || pozicija[k + 2, v - 1] == "koC1" || pozicija[k + 2, v - 1] == "koC2" || pozicija[k + 2, v + 1] == "koC1" ||
                 pozicija[k + 2, v + 1] == "koC2")
                 return 0;
-            else return 1;
+            else
+            {
+                for(int i = 2; ((k+i)<9 && (v+i)<9 && pozicija[k+i-1 , v + i-1 ] == null); i++)
+                {
+                    if (pozicija[k + i, v + i] == "krC1" || pozicija[k + i, v + i] == "lC1" || pozicija[k + i, v + i] == "lC2")
+                        return 0;
+                }
+                for (int i = 2; ((k - i) > 0 && (v + i) < 9 && pozicija[k - i - 1, v + i - 1] == null); i++)
+                {
+                    if (pozicija[k - i, v + i] == "krC1" || pozicija[k - i, v + i] == "lC1" || pozicija[k - i, v + i] == "lC2")
+                        return 0;
+                }
+                for (int i = 2; ((k - i) > 0 && (v - i) > 0 && pozicija[k - i - 1, v - i - 1] == null); i++)
+                {
+                    if (pozicija[k - i, v - i] == "krC1" || pozicija[k - i, v - i] == "lC1" || pozicija[k - i, v - i] == "lC2")
+                        return 0;
+                }
+                for (int i = 2; ((k + i) < 9 && (v - i) > 0 && pozicija[k + i - 1, v - i - 1] == null); i++)
+                {
+                    if (pozicija[k + i, v - i] == "krC1" || pozicija[k + i, v - i] == "lC1" || pozicija[k + i, v - i] == "lC2")
+                        return 0;
+                }
+                
+                for (int i = 2; ((k + i) < 9 && pozicija[k + i - 1, v] == null); i++)
+                {
+                    if (pozicija[k + i, v ] == "krC1" || pozicija[k + i, v ] == "tC1" || pozicija[k + i, v ] == "tC2")
+                        return 0;
+                }
+                for (int i = 2; ((k - i) > 0 && pozicija[k - i - 1, v ] == null); i++)
+                {
+                    if (pozicija[k - i, v] == "krC1" || pozicija[k - i, v] == "tC1" || pozicija[k - i, v] == "tC2")
+                        return 0;
+                }
+                for (int i = 2; ((v - i) > 0 && pozicija[k , v - i - 1] == null); i++)
+                {
+                    if (pozicija[k , v - i] == "krC1" || pozicija[k , v - i - 1] == "tC1" || pozicija[k , v - i] == "tC2")
+                        return 0;
+                }
+                for (int i = 2; ((v + i) < 9 && pozicija[k , v + i - 1] == null); i++)
+                {
+                    if (pozicija[k, v + i] == "krC1" || pozicija[k, v + i] == "tC1" || pozicija[k, v + i] == "tC2")
+                        return 0;
+                }
+                if (pozicija[k - 1, v + 1] == "krC1" || pozicija[k - 1, v + 1] == "lC1" || pozicija[k - 1, v + 1] == "lC2" || pozicija[k - 1, v + 1] == "tC1" || pozicija[k - 1, v + 1] == "tC2" ||
+                    pozicija[k - 1, v ] == "krC1" || pozicija[k - 1, v ] == "lC1" || pozicija[k - 1, v ] == "lC2" || pozicija[k - 1, v ] == "tC1" || pozicija[k - 1, v ] == "tC2" ||
+                    pozicija[k - 1, v - 1] == "krC1" || pozicija[k - 1, v - 1] == "lC1" || pozicija[k - 1, v - 1] == "lC2" || pozicija[k - 1, v - 1] == "tC1" || pozicija[k - 1, v - 1] == "tC2" ||
+                    pozicija[k , v + 1] == "krC1" || pozicija[k , v + 1] == "lC1" || pozicija[k , v + 1] == "lC2" || pozicija[k , v + 1] == "tC1" || pozicija[k , v + 1] == "tC2" ||
+                    pozicija[k , v - 1] == "krC1" || pozicija[k , v - 1] == "lC1" || pozicija[k , v - 1] == "lC2" || pozicija[k , v - 1] == "tC1" || pozicija[k , v - 1] == "tC2" ||
+                    pozicija[k + 1, v + 1] == "krC1" || pozicija[k + 1, v + 1] == "lC1" || pozicija[k + 1, v + 1] == "lC2" || pozicija[k + 1, v + 1] == "tC1" || pozicija[k + 1, v + 1] == "tC2" ||
+                    pozicija[k + 1, v ] == "krC1" || pozicija[k + 1, v ] == "lC1" || pozicija[k + 1, v ] == "lC2" || pozicija[k + 1, v ] == "tC1" || pozicija[k + 1, v ] == "tC2" ||
+                    pozicija[k + 1, v - 1] == "krC1" || pozicija[k + 1, v - 1] == "lC1" || pozicija[k + 1, v - 1] == "lC2" || pozicija[k + 1, v - 1] == "tC1" || pozicija[k + 1, v - 1] == "tC2")
+                    return 0;
+                return 1;
+            }
         }
     }
 }
