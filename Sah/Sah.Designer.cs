@@ -61,6 +61,16 @@
             this.krC1 = new System.Windows.Forms.PictureBox();
             this.kB1 = new System.Windows.Forms.PictureBox();
             this.kC1 = new System.Windows.Forms.PictureBox();
+            this.zKrB = new System.Windows.Forms.PictureBox();
+            this.zamenaBf = new System.Windows.Forms.PictureBox();
+            this.zamenaCf = new System.Windows.Forms.PictureBox();
+            this.zKoB = new System.Windows.Forms.PictureBox();
+            this.zTB = new System.Windows.Forms.PictureBox();
+            this.zLB = new System.Windows.Forms.PictureBox();
+            this.zKrC = new System.Windows.Forms.PictureBox();
+            this.zKoC = new System.Windows.Forms.PictureBox();
+            this.zTC = new System.Windows.Forms.PictureBox();
+            this.zLC = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB3)).BeginInit();
@@ -93,6 +103,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.krC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKrB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zamenaBf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zamenaCf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKoB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zLB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKrC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKoC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zTC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zLC)).BeginInit();
             this.SuspendLayout();
             // 
             // pB1
@@ -392,11 +412,121 @@
             this.kC1.TabIndex = 32;
             this.kC1.TabStop = false;
             // 
+            // zKrB
+            // 
+            this.zKrB.Enabled = false;
+            this.zKrB.Location = new System.Drawing.Point(26, 374);
+            this.zKrB.Name = "zKrB";
+            this.zKrB.Size = new System.Drawing.Size(60, 60);
+            this.zKrB.TabIndex = 33;
+            this.zKrB.TabStop = false;
+            this.zKrB.Visible = false;
+            // 
+            // zamenaBf
+            // 
+            this.zamenaBf.Enabled = false;
+            this.zamenaBf.Location = new System.Drawing.Point(277, 63);
+            this.zamenaBf.Name = "zamenaBf";
+            this.zamenaBf.Size = new System.Drawing.Size(239, 231);
+            this.zamenaBf.TabIndex = 34;
+            this.zamenaBf.TabStop = false;
+            this.zamenaBf.Visible = false;
+            // 
+            // zamenaCf
+            // 
+            this.zamenaCf.Enabled = false;
+            this.zamenaCf.Location = new System.Drawing.Point(468, 63);
+            this.zamenaCf.Name = "zamenaCf";
+            this.zamenaCf.Size = new System.Drawing.Size(221, 230);
+            this.zamenaCf.TabIndex = 35;
+            this.zamenaCf.TabStop = false;
+            this.zamenaCf.Visible = false;
+            // 
+            // zKoB
+            // 
+            this.zKoB.Enabled = false;
+            this.zKoB.Location = new System.Drawing.Point(110, 374);
+            this.zKoB.Name = "zKoB";
+            this.zKoB.Size = new System.Drawing.Size(60, 60);
+            this.zKoB.TabIndex = 36;
+            this.zKoB.TabStop = false;
+            this.zKoB.Visible = false;
+            // 
+            // zTB
+            // 
+            this.zTB.Enabled = false;
+            this.zTB.Location = new System.Drawing.Point(199, 374);
+            this.zTB.Name = "zTB";
+            this.zTB.Size = new System.Drawing.Size(60, 58);
+            this.zTB.TabIndex = 37;
+            this.zTB.TabStop = false;
+            this.zTB.Visible = false;
+            // 
+            // zLB
+            // 
+            this.zLB.Enabled = false;
+            this.zLB.Location = new System.Drawing.Point(287, 374);
+            this.zLB.Name = "zLB";
+            this.zLB.Size = new System.Drawing.Size(60, 60);
+            this.zLB.TabIndex = 38;
+            this.zLB.TabStop = false;
+            this.zLB.Visible = false;
+            // 
+            // zKrC
+            // 
+            this.zKrC.Enabled = false;
+            this.zKrC.Location = new System.Drawing.Point(712, 126);
+            this.zKrC.Name = "zKrC";
+            this.zKrC.Size = new System.Drawing.Size(60, 58);
+            this.zKrC.TabIndex = 39;
+            this.zKrC.TabStop = false;
+            this.zKrC.Visible = false;
+            // 
+            // zKoC
+            // 
+            this.zKoC.Enabled = false;
+            this.zKoC.Location = new System.Drawing.Point(712, 233);
+            this.zKoC.Name = "zKoC";
+            this.zKoC.Size = new System.Drawing.Size(60, 60);
+            this.zKoC.TabIndex = 40;
+            this.zKoC.TabStop = false;
+            this.zKoC.Visible = false;
+            // 
+            // zTC
+            // 
+            this.zTC.Enabled = false;
+            this.zTC.Location = new System.Drawing.Point(712, 299);
+            this.zTC.Name = "zTC";
+            this.zTC.Size = new System.Drawing.Size(60, 60);
+            this.zTC.TabIndex = 41;
+            this.zTC.TabStop = false;
+            this.zTC.Visible = false;
+            // 
+            // zLC
+            // 
+            this.zLC.Enabled = false;
+            this.zLC.Location = new System.Drawing.Point(712, 374);
+            this.zLC.Name = "zLC";
+            this.zLC.Size = new System.Drawing.Size(60, 58);
+            this.zLC.TabIndex = 42;
+            this.zLC.TabStop = false;
+            this.zLC.Visible = false;
+            // 
             // Sah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.zLC);
+            this.Controls.Add(this.zTC);
+            this.Controls.Add(this.zKoC);
+            this.Controls.Add(this.zKrC);
+            this.Controls.Add(this.zLB);
+            this.Controls.Add(this.zTB);
+            this.Controls.Add(this.zKoB);
+            this.Controls.Add(this.zamenaCf);
+            this.Controls.Add(this.zamenaBf);
+            this.Controls.Add(this.zKrB);
             this.Controls.Add(this.kC1);
             this.Controls.Add(this.kB1);
             this.Controls.Add(this.krC1);
@@ -469,6 +599,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.krC1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKrB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zamenaBf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zamenaCf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKoB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zLB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKrC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zKoC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zTC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zLC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,6 +649,16 @@
         private System.Windows.Forms.PictureBox krC1;
         private System.Windows.Forms.PictureBox kB1;
         private System.Windows.Forms.PictureBox kC1;
+        private System.Windows.Forms.PictureBox zKrB;
+        private System.Windows.Forms.PictureBox zamenaBf;
+        private System.Windows.Forms.PictureBox zamenaCf;
+        private System.Windows.Forms.PictureBox zKoB;
+        private System.Windows.Forms.PictureBox zTB;
+        private System.Windows.Forms.PictureBox zLB;
+        private System.Windows.Forms.PictureBox zKrC;
+        private System.Windows.Forms.PictureBox zKoC;
+        private System.Windows.Forms.PictureBox zTC;
+        private System.Windows.Forms.PictureBox zLC;
     }
 }
 
