@@ -298,7 +298,7 @@ namespace Sah
                 }
                 else return "0";
             }
-            if (figura == "lB1" || figura == "lB2" || figura == "zLB" || figura=="zLC")
+            if (figura == "lB1" || figura == "lB2" || figura == "zLB" )
             {
                 Lovac l = new Lovac();
                 if (l.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
@@ -311,7 +311,7 @@ namespace Sah
                 }
                 else return "0";
             }
-            else if (figura == "lC1" || figura == "lC2")
+            else if (figura == "lC1" || figura == "lC2" || figura == "zLC")
             {
                 Lovac l = new Lovac();
                 if (l.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
@@ -448,6 +448,7 @@ namespace Sah
             }
         public int nevalidanBeliPotezZaKralja(int k, int v)
         {
+            
             if (pozicija[k + 1, v + 1] == "pC1" || pozicija[k - 1, v + 1] == "pC1" || pozicija[k + 1, v + 1] == "pC2" || pozicija[k - 1, v + 1] == "pC2" ||
                 pozicija[k + 1, v + 1] == "pC3" || pozicija[k - 1, v + 1] == "pC3" || pozicija[k + 1, v + 1] == "pC4" || pozicija[k - 1, v + 1] == "pC4" ||
                 pozicija[k + 1, v + 1] == "pC5" || pozicija[k - 1, v + 1] == "pC5" || pozicija[k + 1, v + 1] == "pC6" || pozicija[k - 1, v + 1] == "pC6" ||
@@ -480,7 +481,7 @@ namespace Sah
                 }
                 for (int i = 2; ((k - i) > 0 && (v - i) > 0 && pozicija[k - i + 1, v - i + 1] == null); i++)
                 {
-                    if (pozicija[k - i, v - i] == "krC1" || pozicija[k - i, v - i] == "zKrC" || pozicija[k - i, v - i] == "lC1" || pozicija[k - i, v - i] == "lC2" || pozicija[k - i, v - i] == "zLC")
+                    if ( pozicija[k - i, v - i] == "krC1" || pozicija[k - i, v - i] == "zKrC" || pozicija[k - i, v - i] == "lC1" || pozicija[k - i, v - i] == "lC2" || pozicija[k - i, v - i] == "zLC")
                         return 0;
                     if (rtrnValC((k - i), (v - i)) != "0")
                         continue;
@@ -653,5 +654,7 @@ namespace Sah
                 return 1;
             }
         }
+        //string broj;
+        
     }
 }

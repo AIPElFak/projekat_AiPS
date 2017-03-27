@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pB1 = new System.Windows.Forms.PictureBox();
             this.pB2 = new System.Windows.Forms.PictureBox();
             this.pB3 = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,8 @@
             this.zKoC = new System.Windows.Forms.PictureBox();
             this.zTC = new System.Windows.Forms.PictureBox();
             this.zLC = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB3)).BeginInit();
@@ -113,6 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.zKoC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zLC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pB1
@@ -192,9 +196,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(716, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
             // 
             // pC1
             // 
@@ -387,6 +390,9 @@
             // 
             // krC1
             // 
+            this.krC1.BackColor = System.Drawing.Color.Transparent;
+            this.krC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.krC1.Cursor = System.Windows.Forms.Cursors.Default;
             this.krC1.Enabled = false;
             this.krC1.Location = new System.Drawing.Point(287, 12);
             this.krC1.Name = "krC1";
@@ -425,9 +431,9 @@
             // zamenaBf
             // 
             this.zamenaBf.Enabled = false;
-            this.zamenaBf.Location = new System.Drawing.Point(277, 63);
+            this.zamenaBf.Location = new System.Drawing.Point(310, 80);
             this.zamenaBf.Name = "zamenaBf";
-            this.zamenaBf.Size = new System.Drawing.Size(239, 231);
+            this.zamenaBf.Size = new System.Drawing.Size(150, 240);
             this.zamenaBf.TabIndex = 34;
             this.zamenaBf.TabStop = false;
             this.zamenaBf.Visible = false;
@@ -435,9 +441,9 @@
             // zamenaCf
             // 
             this.zamenaCf.Enabled = false;
-            this.zamenaCf.Location = new System.Drawing.Point(468, 63);
+            this.zamenaCf.Location = new System.Drawing.Point(310, 280);
             this.zamenaCf.Name = "zamenaCf";
-            this.zamenaCf.Size = new System.Drawing.Size(221, 230);
+            this.zamenaCf.Size = new System.Drawing.Size(150, 240);
             this.zamenaCf.TabIndex = 35;
             this.zamenaCf.TabStop = false;
             this.zamenaCf.Visible = false;
@@ -512,11 +518,26 @@
             this.zLC.TabStop = false;
             this.zLC.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(712, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 33);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
             // Sah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.zLC);
             this.Controls.Add(this.zTC);
             this.Controls.Add(this.zKoC);
@@ -565,6 +586,8 @@
             this.Name = "Sah";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sah";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Sah_FormClosed);
+            this.Load += new System.EventHandler(this.Sah_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Sah_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Sah_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).EndInit();
@@ -609,6 +632,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.zKoC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zLC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,6 +683,8 @@
         private System.Windows.Forms.PictureBox zKoC;
         private System.Windows.Forms.PictureBox zTC;
         private System.Windows.Forms.PictureBox zLC;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
