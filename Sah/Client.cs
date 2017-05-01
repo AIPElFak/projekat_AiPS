@@ -9,6 +9,7 @@ namespace Sah
 {
     class Client
     {
+        string partija;
         static Client instance;
         public static Client Instance()
         {
@@ -23,10 +24,11 @@ namespace Sah
             
         public void client1()
         {
-                client.Connect("192.168.0.101", 8910);
-            replyMsg = client.WriteLineAndGetReply("Hello world!", TimeSpan.FromSeconds(20));
+                client.Connect("192.168.0.101", 8911);
+            replyMsg = client.WriteLineAndGetReply("0,0,0,0,0,0,0", TimeSpan.FromSeconds(200));
             if (replyMsg != null)
                 Console.WriteLine(replyMsg.MessageString);
+            partija = replyMsg.MessageString.ToString();
            // return 1;
         }
         string prinljeno;
@@ -43,7 +45,7 @@ namespace Sah
             {
                 while (message != null)
                 {
-                    replyMsg = client.WriteLineAndGetReply(message, TimeSpan.FromSeconds(100)); //dobijena
+                    replyMsg = client.WriteLineAndGetReply(message, TimeSpan.FromSeconds(1000)); //dobijena
                     if (replyMsg != null)
                     {
                         Console.WriteLine(replyMsg.MessageString);
@@ -56,6 +58,16 @@ namespace Sah
                 }
             }
             
+        }
+
+        public string gg()
+        {
+            return partija;
+        }
+        public string igra(string s)
+        {
+            partija = s;
+            return "";
         }
     }
 }

@@ -19,8 +19,10 @@ namespace Sah
             return instance;
         }
         
-        SimpleTcpServer server = new SimpleTcpServer().Start(8910);
+        SimpleTcpServer server = new SimpleTcpServer().Start(8911);
+        //static int i = 1;
         int clientsConnected;
+        string partija;
         public void server1()
         {
             //dodaj figuru za menjanje ovde
@@ -28,9 +30,13 @@ namespace Sah
             server.DelimiterDataReceived += (sender, msg) =>
             {
                 // Console.WriteLine(msg.MessageString);
+               
                 string k = msg.MessageString;
                 string[] niz = k.Split(',');
                 primljeno1 = niz[5] + "," + niz[6] + "," + niz[1] + ","+niz[2];
+                Console.WriteLine(primljeno1);
+                if (primljeno1 == "0,0,0,0")
+                    server.Broadcast(partija);
                 Figura.Instance().zameni(int.Parse(niz[5]), int.Parse(niz[6]), int.Parse(niz[1]), int.Parse(niz[2]));
             };
             clientsConnected = server.ConnectedClientsCount;
@@ -61,6 +67,16 @@ namespace Sah
                     Console.WriteLine("number of connected clients is: " + clientsConnected);
                 message = Console.ReadLine();
             }
+        }
+
+        public string gg()
+        {
+            return partija;
+        }
+        public string igra(string s)
+        {
+            partija = s;
+            return "";
         }
     }
 }

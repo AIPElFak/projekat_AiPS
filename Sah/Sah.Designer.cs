@@ -74,6 +74,26 @@
             this.zLC = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sacuvaj = new System.Windows.Forms.Button();
+            this.sacuvajText = new System.Windows.Forms.TextBox();
+            this.sacuvajLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pB1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB3)).BeginInit();
@@ -185,7 +205,7 @@
             // pB8
             // 
             this.pB8.Enabled = false;
-            this.pB8.Location = new System.Drawing.Point(629, 233);
+            this.pB8.Location = new System.Drawing.Point(26, 480);
             this.pB8.Name = "pB8";
             this.pB8.Size = new System.Drawing.Size(60, 60);
             this.pB8.TabIndex = 7;
@@ -194,7 +214,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(716, 92);
+            this.label1.Location = new System.Drawing.Point(726, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 8;
@@ -481,7 +501,7 @@
             // zKrC
             // 
             this.zKrC.Enabled = false;
-            this.zKrC.Location = new System.Drawing.Point(712, 126);
+            this.zKrC.Location = new System.Drawing.Point(576, 158);
             this.zKrC.Name = "zKrC";
             this.zKrC.Size = new System.Drawing.Size(60, 58);
             this.zKrC.TabIndex = 39;
@@ -491,7 +511,7 @@
             // zKoC
             // 
             this.zKoC.Enabled = false;
-            this.zKoC.Location = new System.Drawing.Point(712, 233);
+            this.zKoC.Location = new System.Drawing.Point(110, 480);
             this.zKoC.Name = "zKoC";
             this.zKoC.Size = new System.Drawing.Size(60, 60);
             this.zKoC.TabIndex = 40;
@@ -525,11 +545,206 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(712, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(722, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 33);
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
+            // 
+            // sacuvaj
+            // 
+            this.sacuvaj.Location = new System.Drawing.Point(663, 173);
+            this.sacuvaj.Name = "sacuvaj";
+            this.sacuvaj.Size = new System.Drawing.Size(75, 23);
+            this.sacuvaj.TabIndex = 44;
+            this.sacuvaj.Text = "Sacuvaj ";
+            this.sacuvaj.UseVisualStyleBackColor = true;
+            this.sacuvaj.Click += new System.EventHandler(this.sacuvaj_Click);
+            // 
+            // sacuvajText
+            // 
+            this.sacuvajText.Location = new System.Drawing.Point(663, 203);
+            this.sacuvajText.Name = "sacuvajText";
+            this.sacuvajText.Size = new System.Drawing.Size(100, 20);
+            this.sacuvajText.TabIndex = 45;
+            this.sacuvajText.Visible = false;
+            // 
+            // sacuvajLabel
+            // 
+            this.sacuvajLabel.AutoSize = true;
+            this.sacuvajLabel.Location = new System.Drawing.Point(663, 233);
+            this.sacuvajLabel.Name = "sacuvajLabel";
+            this.sacuvajLabel.Size = new System.Drawing.Size(0, 13);
+            this.sacuvajLabel.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Green;
+            this.label2.Location = new System.Drawing.Point(42, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "8";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Green;
+            this.label3.Location = new System.Drawing.Point(42, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "7";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Location = new System.Drawing.Point(42, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Green;
+            this.label5.Location = new System.Drawing.Point(42, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.Location = new System.Drawing.Point(42, 315);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "4";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Green;
+            this.label7.Location = new System.Drawing.Point(42, 385);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "3";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Green;
+            this.label8.Location = new System.Drawing.Point(42, 445);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Green;
+            this.label9.Location = new System.Drawing.Point(42, 505);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(13, 13);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Green;
+            this.label10.Location = new System.Drawing.Point(81, 545);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(14, 13);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "A";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Green;
+            this.label11.Location = new System.Drawing.Point(141, 545);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(14, 13);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "B";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Green;
+            this.label12.Location = new System.Drawing.Point(201, 545);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 13);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "C";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Green;
+            this.label13.Location = new System.Drawing.Point(261, 545);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(15, 13);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "D";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Green;
+            this.label14.Location = new System.Drawing.Point(321, 545);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 13);
+            this.label14.TabIndex = 59;
+            this.label14.Text = "E";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Green;
+            this.label15.Location = new System.Drawing.Point(381, 545);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.TabIndex = 60;
+            this.label15.Text = "F";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Green;
+            this.label16.Location = new System.Drawing.Point(441, 545);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(15, 13);
+            this.label16.TabIndex = 61;
+            this.label16.Text = "G";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Green;
+            this.label17.Location = new System.Drawing.Point(501, 545);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(15, 13);
+            this.label17.TabIndex = 62;
+            this.label17.Text = "H";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(629, 255);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 63;
+            this.label18.Text = "label18";
             // 
             // Sah
             // 
@@ -537,6 +752,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.sacuvajLabel);
+            this.Controls.Add(this.sacuvajText);
+            this.Controls.Add(this.sacuvaj);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.zLC);
             this.Controls.Add(this.zTC);
@@ -685,6 +920,26 @@
         private System.Windows.Forms.PictureBox zLC;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button sacuvaj;
+        private System.Windows.Forms.TextBox sacuvajText;
+        private System.Windows.Forms.Label sacuvajLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }
 
