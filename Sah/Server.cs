@@ -20,9 +20,9 @@ namespace Sah
         }
         
         SimpleTcpServer server = new SimpleTcpServer().Start(8911);
-        //static int i = 1;
+        static int i = 1;
         int clientsConnected;
-        string partija;
+        string partija,sahmat;
         public void server1()
         {
             //dodaj figuru za menjanje ovde
@@ -38,6 +38,12 @@ namespace Sah
                 if (primljeno1 == "0,0,0,0")
                     server.Broadcast(partija);
                 Figura.Instance().zameni(int.Parse(niz[5]), int.Parse(niz[6]), int.Parse(niz[1]), int.Parse(niz[2]));
+                if(niz[7]=="sahmat")
+                {
+                    sahmat = "sahmat";
+                  //  Kraj kr = new Kraj();
+                   // kr.Show();
+                }
             };
             clientsConnected = server.ConnectedClientsCount;
             //Console.WriteLine("number of connected clients is: " + clientsConnected);
@@ -49,12 +55,18 @@ namespace Sah
         string primljeno1=",";
         public string vv()
         {
+            if(sahmat=="sahmat")
+            {
+                Kraj kr = new Kraj();
+                kr.Show();
+                sahmat = "";
+            }
             return primljeno1;
         }
      
-        public void salji(string pozicija, int brojKlika,string prvaFigura,int staraKolona,int staraVrsta, int c)
+        public void salji(string pozicija, int brojKlika,string prvaFigura,int staraKolona,int staraVrsta, int c,string pozicijamat)
         {
-            var message = pozicija + "," + brojKlika.ToString()+","+prvaFigura+","+staraKolona+","+staraVrsta; // Console.ReadLine();
+            var message = pozicija + "," + brojKlika.ToString()+","+prvaFigura+","+staraKolona+","+staraVrsta+","+pozicijamat; // Console.ReadLine();
             if(c ==1)
             while (message != null)
             {

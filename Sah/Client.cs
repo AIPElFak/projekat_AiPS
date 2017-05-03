@@ -37,11 +37,19 @@ namespace Sah
             return prinljeno;
         }
         String message;
-        public void salji(int c, string pozicija, int brojKlika, string prvaFigura, int staraKolona, int staraVrsta)
+        public void salji(int c, string pozicija, int brojKlika, string prvaFigura, int staraKolona, int staraVrsta,string pozicijaMat)
         {
-            message = c+","+pozicija+","+brojKlika.ToString()+","+prvaFigura+","+staraKolona+","+staraVrsta;
+            message = c+","+pozicija+","+brojKlika.ToString()+","+prvaFigura+","+staraKolona+","+staraVrsta+","+pozicijaMat;
             //var message = Console.ReadLine(); //saljemo
-            if (c != 1)
+            if (pozicijaMat == "sahmat")
+            {  
+                replyMsg = client.WriteLineAndGetReply(message, TimeSpan.FromSeconds(1)); //dobijena
+                Kraj kr = new Kraj();
+                kr.Show();
+                //message = Console.ReadLine();
+                // message = "kraj";
+            }
+            else if (c != 1)
             {
                 while (message != null)
                 {
@@ -53,6 +61,11 @@ namespace Sah
                         string[] niz = k.Split(',');
                         Figura.Instance().zameni(int.Parse(niz[4]), int.Parse(niz[5]), int.Parse(niz[0]), int.Parse(niz[1]));
                         prinljeno = replyMsg.MessageString;
+                        if (niz[6] == "sahmat")
+                        {
+                            Kraj kr = new Kraj();
+                            kr.Show();
+                        }
                     }
                     message = Console.ReadLine();
                 }

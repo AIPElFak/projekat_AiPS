@@ -723,7 +723,9 @@ namespace Sah
 
         public int mat(int v, int k)
         {
-            for(int i=1; i<=8; i++)
+            int kolonak = kolona;
+            int vrstav = vrsta;
+            for (int i=1; i<=8; i++)
             {
                 for(int j=1; j<=8; j++)
                 {
@@ -756,6 +758,8 @@ namespace Sah
                                         if (i != m || j != n)
                                         {
                                             figura = pozicija[v, k];
+                                            kolona = kolonak;
+                                            vrsta = vrstav;
                                             return 1;
                                         }
                                     }
@@ -765,6 +769,8 @@ namespace Sah
                     }
                 }
             }
+            kolona = kolonak;
+            vrsta = vrstav;
             return 0;
         }
 

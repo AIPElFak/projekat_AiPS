@@ -151,6 +151,7 @@ namespace Sah
             zLC.Enabled = false;
         }
         Baza baza = new Baza();
+        string pozicijamat;
         public int c,i=0;
         public int pasvaluec
         {
@@ -251,8 +252,14 @@ namespace Sah
                         ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
                         Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                         if (Figura.Instance().mat1(brojKolone, brojVrste) == 0)
+                        {
                             label18.Text = "sahmat";
-                        Client.Instance().salji(c, brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta());
+                            pozicijamat = "sahmat"; ;
+                            //Kraj k = new Kraj();
+                            //k.Show();
+                        }
+                            
+                        Client.Instance().salji(c, brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(),pozicijamat);
                         baza.dodajAutomatski( Figura.Instance().sss1());
                         brojKlika = 1;
                     }
@@ -288,8 +295,13 @@ namespace Sah
                             ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Visible = false;
                             Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                             if (Figura.Instance().mat1(brojKolone, brojVrste) == 0)
+                            {
                                 label18.Text = "sahmat";
-                            Client.Instance().salji(c, brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta());
+                                pozicijamat = "sahmat";
+                                //Kraj k = new Kraj();
+                               // k.Show();
+                            }
+                            Client.Instance().salji(c, brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(),pozicijamat);
                             baza.dodajAutomatski(Figura.Instance().sss1());
                             brojKlika = 3;
                         }
@@ -326,7 +338,14 @@ namespace Sah
                     {
                         ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
                         Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
-                        Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c);
+                        if (Figura.Instance().mat(brojKolone, brojVrste) == 0)
+                        {
+                            label1.Text = "sahmat";
+                            pozicijamat = "sahmat";
+                            Kraj k = new Kraj();
+                            k.Show();
+                        }
+                        Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c, pozicijamat);
                         baza.dodajAutomatski(Figura.Instance().sss1());
                         brojKlika = 1;
                     }
@@ -360,7 +379,14 @@ namespace Sah
                             ((PictureBox)this.Controls[prvaFigura]).Location = ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location;
                             ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Visible = false;
                             Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
-                            Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c);
+                            if (Figura.Instance().mat(brojKolone, brojVrste) == 0)
+                            {
+                                label1.Text = "sahmat";
+                                pozicijamat = "sahmat";
+                                Kraj k = new Kraj();
+                                k.Show();
+                            }
+                            Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c,pozicijamat);
                             baza.dodajAutomatski(Figura.Instance().sss1());
                             brojKlika = 1;
                         }
@@ -474,8 +500,13 @@ namespace Sah
                         odredi2(brojKolone, brojVrste);
                     //Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c);
                         brojKlika = 3;
-                    if (Figura.Instance().mat(brojKolone, brojVrste) == 0)
-                        label1.Text = "sahmat"; 
+                    //if (Figura.Instance().mat(brojKolone, brojVrste) == 0)
+                    //{
+                    //    label1.Text = "sahmat";
+                    //    Kraj k = new Kraj();
+                    //    k.Show();
+                    //}
+
                 }
             }
 
@@ -490,7 +521,7 @@ namespace Sah
                     zKrB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
                     zKrB.Visible = true;
                     Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 1);
-                    Client.Instance().salji(c, 0 +","+1 , brojKlika, prvaFigura, kolonaZamena , vrstaZamena);
+                    //Client.Instance().salji(c, 0 +","+1 , brojKlika, prvaFigura, kolonaZamena , vrstaZamena);
                     brojKlika = 1;
                 }
                 else if (e.X > 310 && e.Y >= 140 && e.Y<200 && e.X<460)
