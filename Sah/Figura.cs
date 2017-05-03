@@ -693,7 +693,7 @@ namespace Sah
         string ss;
         public string sss()
         {
-            //ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
+            ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
             try
             {
                 ss = Server.Instance().gg();

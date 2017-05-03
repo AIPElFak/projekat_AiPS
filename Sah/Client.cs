@@ -24,8 +24,8 @@ namespace Sah
             
         public void client1()
         {
-                client.Connect("192.168.0.101", 8911);
-            replyMsg = client.WriteLineAndGetReply("0,0,0,0,0,0,0", TimeSpan.FromSeconds(200));
+                client.Connect("192.168.0.11", 8911);
+            replyMsg = client.WriteLineAndGetReply("0,0,0,0,0,0,0,0", TimeSpan.FromSeconds(200));
             if (replyMsg != null)
                 Console.WriteLine(replyMsg.MessageString);
             partija = replyMsg.MessageString.ToString();

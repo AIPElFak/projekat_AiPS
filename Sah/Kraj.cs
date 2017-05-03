@@ -19,9 +19,12 @@ namespace Sah
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Pocetak p = new Pocetak();
-            p.Show();
+            Application.Restart();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
