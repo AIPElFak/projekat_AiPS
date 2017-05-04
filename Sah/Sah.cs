@@ -163,28 +163,28 @@ namespace Sah
         private void Sah_Paint(object sender, PaintEventArgs e)
         {
             Graphics o = CreateGraphics();
-            Brush black = new SolidBrush(Color.Black);
-            Brush yellow = new SolidBrush(Color.Yellow);
+           // Brush black = new SolidBrush(Color.Black);
+            //Brush yellow = new SolidBrush(Color.Yellow);
             Brush green = new SolidBrush(Color.Green);
-            Pen red1 = new Pen(Color.Red);
+           // Pen red1 = new Pen(Color.Red);
             o.FillRectangle(green, t.sirinaX() / 3 * 2, t.visinaY(), t.sirinaX() / 3, t.visinaY() * 8);
             o.FillRectangle(green, t.sirinaX() / 3 * 2, t.visinaY() * 9, t.sirinaX() * 8 + t.sirinaX() / 3, t.sirinaX() / 3);
-            int k = 0;
-            for (int i = 1; i <= 8; i++)
-            {
-                for (int j = 1; j <= 8; j++)
-                {
-                    k++;
-                    if (k % 2 == 0 && i % 2 == 0)
-                        o.FillRectangle(yellow, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
-                    else if (k % 2 != 0 && i % 2 == 0)
-                        o.FillRectangle(black, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
-                    else if (k % 2 == 0 && i % 2 != 0)
-                        o.FillRectangle(black, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
-                    else if (k % 2 != 0 && i % 2 != 0)
-                        o.FillRectangle(yellow, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
-                }
-            }
+            //int k = 0;
+            //for (int i = 1; i <= 8; i++)
+            //{
+            //    for (int j = 1; j <= 8; j++)
+            //    {
+            //        k++;
+            //        if (k % 2 == 0 && i % 2 == 0)
+            //            o.FillRectangle(yellow, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
+            //        else if (k % 2 != 0 && i % 2 == 0)
+            //            o.FillRectangle(black, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
+            //        else if (k % 2 == 0 && i % 2 != 0)
+            //            o.FillRectangle(black, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
+            //        else if (k % 2 != 0 && i % 2 != 0)
+            //            o.FillRectangle(yellow, i * t.sirinaX(), j * t.visinaY(), t.sirinaX(), t.visinaY());
+            //    }
+            //}
             pB1.Location = new Point(Figura.Instance().kolonaZaFiguru("pB1"), Figura.Instance().vrstaZaFiguru("pB1"));
             pB2.Location = new Point(Figura.Instance().kolonaZaFiguru("pB2"), Figura.Instance().vrstaZaFiguru("pB2"));
             pB3.Location = new Point(Figura.Instance().kolonaZaFiguru("pB3"), Figura.Instance().vrstaZaFiguru("pB3"));
@@ -236,33 +236,30 @@ namespace Sah
             {
                 if (Figura.Instance().napadnutBeliKralj(brojKolone, brojVrste) == 1)
                 {
-                    if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "izmeniPiona")
-                    {
-                        label1.Text = "izvrsi zamenu";
-                        ((PictureBox)this.Controls[Figura.Instance().vratiFiguru(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta())]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
-                        Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
-                        zamenaBf.Visible = true;
-                        //zamenaBf.Enabled = true;
-                        kolonaZamena = brojKolone;
-                        vrstaZamena = brojVrste;
-                        brojKlika = 5;
-                    }
-                    else
-                    {
+                    //if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "izmeniPiona")
+                    //{
+                    //    label1.Text = "izvrsi zamenu";
+                    //    ((PictureBox)this.Controls[Figura.Instance().vratiFiguru(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta())]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
+                    //    Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
+                    //    zamenaBf.Visible = true;
+                    //    //zamenaBf.Enabled = true;
+                    //    kolonaZamena = brojKolone;
+                    //    vrstaZamena = brojVrste;
+                    //    brojKlika = 5;
+                    //}
+                    //else
+                    //{
                         ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
                         Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                         if (Figura.Instance().mat1(brojKolone, brojVrste) == 0)
                         {
-                            label18.Text = "sahmat";
                             pozicijamat = "sahmat"; ;
-                            //Kraj k = new Kraj();
-                            //k.Show();
                         }
                             
                         Client.Instance().salji(c, brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(),pozicijamat);
                         baza.dodajAutomatski( Figura.Instance().sss1());
                         brojKlika = 1;
-                    }
+                    //}
                 }
                 else brojKlika = 1;
             }
@@ -296,14 +293,11 @@ namespace Sah
                             Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                             if (Figura.Instance().mat1(brojKolone, brojVrste) == 0)
                             {
-                                label18.Text = "sahmat";
                                 pozicijamat = "sahmat";
-                                //Kraj k = new Kraj();
-                               // k.Show();
                             }
                             Client.Instance().salji(c, brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(),pozicijamat);
                             baza.dodajAutomatski(Figura.Instance().sss1());
-                            brojKlika = 3;
+                            brojKlika = 1;
                         }
                         else brojKlika = 1;
                     }
@@ -324,18 +318,18 @@ namespace Sah
             {
                 if (Figura.Instance().napadnutCrniKralj(brojKolone, brojVrste) == 1)
                 {
-                    if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "izmeniPiona")
-                    {
-                        label1.Text = "izvrsi zamenu";
-                        ((PictureBox)this.Controls[Figura.Instance().vratiFiguru(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta())]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
-                        Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
-                        zamenaCf.Visible = true;
-                        kolonaZamena = brojKolone;
-                        vrstaZamena = brojVrste;
-                        brojKlika = 6;
-                    }
-                    else
-                    {
+                    //if (Figura.Instance().odrediFiguru(brojKolone, brojVrste) == "izmeniPiona")
+                    //{
+                    //    label1.Text = "izvrsi zamenu";
+                    //    ((PictureBox)this.Controls[Figura.Instance().vratiFiguru(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta())]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
+                    //    Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
+                    //    zamenaCf.Visible = true;
+                    //    kolonaZamena = brojKolone;
+                    //    vrstaZamena = brojVrste;
+                    //    brojKlika = 6;
+                    //}
+                    //else
+                    //{
                         ((PictureBox)this.Controls[Figura.Instance().odrediFiguru(brojKolone, brojVrste)]).Location = new Point(brojKolone * 60, (9 - brojVrste) * 60);
                         Figura.Instance().zameni(Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), brojKolone, brojVrste);
                         if (Figura.Instance().mat(brojKolone, brojVrste) == 0)
@@ -347,8 +341,8 @@ namespace Sah
                         }
                         Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c, pozicijamat);
                         baza.dodajAutomatski(Figura.Instance().sss1());
-                        brojKlika = 1;
-                    }
+                        brojKlika = 3;
+                    //}
                 }
                 else brojKlika = 3;
             }
@@ -421,7 +415,7 @@ namespace Sah
                 }
         }
 
-        private void Sah_FormClosed(object sender, FormClosedEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -431,8 +425,8 @@ namespace Sah
             if(i==0)
             {
                 sacuvajText.Visible = true;
-                sacuvajLabel.Text = "Unesi ime";
-                sacuvaj.Text = "Uredu";
+                sacuvajLabel.Text = "Enter name";
+                sacuvaj.Text = "Ok";
                 i = 1;
             }
             else
@@ -441,7 +435,7 @@ namespace Sah
                 baza.dodaj(sacuvajText.Text, Figura.Instance().sss1());
                 sacuvajText.Visible = true;
                 sacuvajLabel.Text = " ";
-                sacuvaj.Text = "Uredu";
+                sacuvaj.Text = "Ok";
                 i = 1;
 
             }
@@ -453,7 +447,7 @@ namespace Sah
             int brojKolone, brojVrste;
             brojKolone = (e.X) / 60;
             brojVrste = 8 - e.Y / 60 + 1;
-            label1.Text= Figura.Instance().vratiFiguru(brojKolone,brojVrste);
+            //label1.Text= Figura.Instance().vratiFiguru(brojKolone,brojVrste);
             if(brojKolone<1 || brojKolone>8 || brojVrste<1 || brojVrste>8)  // u slucaju da je kliknuto van table
                 Console.WriteLine("greska");
             else if (brojKlika == 1)  // beli igrac bira figuru koju zeli pomeriti
@@ -497,108 +491,101 @@ namespace Sah
             {
                 if (c == 1)
                 {
-                        odredi2(brojKolone, brojVrste);
-                    //Server.Instance().salji(brojKolone + "," + brojVrste, brojKlika, prvaFigura, Figura.Instance().staraKolona(), Figura.Instance().staraVrsta(), c);
-                        brojKlika = 3;
-                    //if (Figura.Instance().mat(brojKolone, brojVrste) == 0)
-                    //{
-                    //    label1.Text = "sahmat";
-                    //    Kraj k = new Kraj();
-                    //    k.Show();
-                    //}
-
+                    odredi2(brojKolone, brojVrste);
+                    brojKlika = 3;
+                    c = 2;
                 }
             }
 
-            else if(brojKlika==5)
-            {
-                if(e.X > 310 && e.Y >= 80 && e.Y < 140 && e.X < 460)
-                {
-                    zamenaBf.Visible = false;
-                    fdisable();
-                    //brojKlika = 3;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zKrB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zKrB.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 1);
-                    //Client.Instance().salji(c, 0 +","+1 , brojKlika, prvaFigura, kolonaZamena , vrstaZamena);
-                    brojKlika = 1;
-                }
-                else if (e.X > 310 && e.Y >= 140 && e.Y<200 && e.X<460)
-                {
-                    zamenaBf.Visible = false;
-                    fdisable();
-                    brojKlika = 3;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zKoB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zKoB.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 2);
-                }
-                else if (e.X > 310 && e.Y >= 200 && e.Y < 260 && e.X < 460)
-                {
-                    zamenaBf.Visible = false;
-                    fdisable();
-                    brojKlika = 3;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zTB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zTB.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 3);
-                }
-                else if (e.X > 310 && e.Y >= 260 && e.Y < 320 && e.X < 460)
-                {
-                    zamenaBf.Visible = false;
-                    fdisable();
-                    brojKlika = 3;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zLB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zLB.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 4);
-                }
-            }
+            //else if(brojKlika==5)
+            //{
+            //    if(e.X > 310 && e.Y >= 80 && e.Y < 140 && e.X < 460)
+            //    {
+            //        zamenaBf.Visible = false;
+            //        fdisable();
+            //        //brojKlika = 3;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zKrB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zKrB.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 1);
+            //        //Client.Instance().salji(c, 0 +","+1 , brojKlika, prvaFigura, kolonaZamena , vrstaZamena);
+            //        brojKlika = 1;
+            //    }
+            //    else if (e.X > 310 && e.Y >= 140 && e.Y<200 && e.X<460)
+            //    {
+            //        zamenaBf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 3;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zKoB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zKoB.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 2);
+            //    }
+            //    else if (e.X > 310 && e.Y >= 200 && e.Y < 260 && e.X < 460)
+            //    {
+            //        zamenaBf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 3;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zTB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zTB.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 3);
+            //    }
+            //    else if (e.X > 310 && e.Y >= 260 && e.Y < 320 && e.X < 460)
+            //    {
+            //        zamenaBf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 3;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zLB.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zLB.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 4);
+            //    }
+            //}
 
-            else if(brojKlika==6)
-            {
-                if (e.X > 310 && e.Y >= 280 && e.Y < 340 && e.X < 460)
-                {
-                    zamenaCf.Visible = false;
-                    fdisable();
-                    brojKlika = 1;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zKrC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zKrC.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 5);
-                }
-                else if (e.X > 310 && e.Y >= 340 && e.Y < 400 && e.X < 460)
-                {
-                    zamenaCf.Visible = false;
-                    fdisable();
-                    brojKlika = 1;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zKoC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zKoC.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 6);
-                }
-                else if (e.X > 310 && e.Y >= 400 && e.Y < 460 && e.X < 460)
-                {
-                    zamenaCf.Visible = false;
-                    fdisable();
-                    brojKlika = 1;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zTC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zTC.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 7);
-                }
-                else if (e.X > 310 && e.Y >= 460 && e.Y < 520 && e.X < 460)
-                {
-                    zamenaCf.Visible = false;
-                    fdisable();
-                    brojKlika = 1;
-                    string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
-                    zLC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
-                    zLC.Visible = true;
-                    Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 8);
-                }
-            }
+            //else if(brojKlika==6)
+            //{
+            //    if (e.X > 310 && e.Y >= 280 && e.Y < 340 && e.X < 460)
+            //    {
+            //        zamenaCf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 1;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zKrC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zKrC.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 5);
+            //    }
+            //    else if (e.X > 310 && e.Y >= 340 && e.Y < 400 && e.X < 460)
+            //    {
+            //        zamenaCf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 1;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zKoC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zKoC.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 6);
+            //    }
+            //    else if (e.X > 310 && e.Y >= 400 && e.Y < 460 && e.X < 460)
+            //    {
+            //        zamenaCf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 1;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zTC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zTC.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 7);
+            //    }
+            //    else if (e.X > 310 && e.Y >= 460 && e.Y < 520 && e.X < 460)
+            //    {
+            //        zamenaCf.Visible = false;
+            //        fdisable();
+            //        brojKlika = 1;
+            //        string kz = Figura.Instance().vratiFiguru(kolonaZamena, vrstaZamena);
+            //        zLC.Location = new Point(Figura.Instance().kolonaZaFiguru(kz), Figura.Instance().vrstaZaFiguru(kz));
+            //        zLC.Visible = true;
+            //        Figura.Instance().izvrsiZamenu(kolonaZamena, vrstaZamena, 0, 8);
+            //    }
+            //}
         }
     }
 }

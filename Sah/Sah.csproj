@@ -129,7 +129,31 @@
     <Folder Include="bin\Debug\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\topc.png" />
+    <None Include="Resources\bfigure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfigure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CIMG2755.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sahbackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slikatable2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slikazasah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krajigre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ikonica.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\konj.png" />
@@ -138,16 +162,22 @@
     <None Include="Resources\konjc.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lovac.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lovacc.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\kralj.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kraljc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kraljica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kraljicac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lovac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lovacc.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pion.png" />
@@ -159,22 +189,7 @@
     <None Include="Resources\top.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bfigure.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cfigure.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kraljica.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kraljicac.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CIMG2755.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images.png" />
+    <None Include="Resources\topc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

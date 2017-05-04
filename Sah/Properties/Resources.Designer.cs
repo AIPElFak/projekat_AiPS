@@ -83,19 +83,9 @@ namespace Sah.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CIMG2755 {
+        internal static System.Drawing.Bitmap ikonica {
             get {
-                object obj = ResourceManager.GetObject("CIMG2755", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap images {
-            get {
-                object obj = ResourceManager.GetObject("images", resourceCulture);
+                object obj = ResourceManager.GetObject("ikonica", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +106,16 @@ namespace Sah.Properties {
         internal static System.Drawing.Bitmap konjc {
             get {
                 object obj = ResourceManager.GetObject("konjc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap krajigre {
+            get {
+                object obj = ResourceManager.GetObject("krajigre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +196,26 @@ namespace Sah.Properties {
         internal static System.Drawing.Bitmap pionc {
             get {
                 object obj = ResourceManager.GetObject("pionc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sahbackground {
+            get {
+                object obj = ResourceManager.GetObject("sahbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap slikazasah {
+            get {
+                object obj = ResourceManager.GetObject("slikazasah", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

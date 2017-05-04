@@ -24,7 +24,7 @@ namespace Sah
             
         public void client1()
         {
-                client.Connect("192.168.0.11", 8911);
+                client.Connect("10.66.150.252", 8911);
             replyMsg = client.WriteLineAndGetReply("0,0,0,0,0,0,0,0", TimeSpan.FromSeconds(200));
             if (replyMsg != null)
                 Console.WriteLine(replyMsg.MessageString);
@@ -46,8 +46,6 @@ namespace Sah
                 replyMsg = client.WriteLineAndGetReply(message, TimeSpan.FromSeconds(1)); //dobijena
                 Kraj kr = new Kraj();
                 kr.Show();
-                //message = Console.ReadLine();
-                // message = "kraj";
             }
             else if (c != 1)
             {

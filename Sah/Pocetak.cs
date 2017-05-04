@@ -57,13 +57,26 @@ namespace Sah
 
         private void Ucitaj_Click(object sender, EventArgs e)
         {
-            Baza baza = new Baza();
-            Server.Instance().igra(baza.ucitaj(listView1.SelectedItems[0].Text/*"standard1"*/));
-            Sah s = new Sah();
-            s.pasvaluec = 1;
-            s.Show();
-            this.Hide();
-            Server.Instance().server1();
+            try
+            {
+                Baza baza = new Baza();
+                Server.Instance().igra(baza.ucitaj(listView1.SelectedItems[0].Text));
+                Sah s = new Sah();
+                s.pasvaluec = 1;
+                s.Show();
+                this.Hide();
+                Server.Instance().server1();
+            }
+            catch
+            {
+                label1.Text = "You must select a game";
+            }
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

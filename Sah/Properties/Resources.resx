@@ -118,52 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bfigure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bfigure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cfigure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cfigure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sahbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sahbackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ikonica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ikonica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="konj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\konj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="konjc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\konjc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="krajigre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\krajigre.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kralj" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kralj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kraljc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kraljc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kraljica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kraljica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kraljicac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kraljicac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lovac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lovac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lovacc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lovacc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kraljc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kraljc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CIMG2755" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CIMG2755.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pionc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pionc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="konjc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\konjc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bfigure" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bfigure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kraljica" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kraljica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="konj" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\konj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cfigure" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cfigure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kraljicac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kraljicac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="topc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\topc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="slikazasah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slikazasah.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="top" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\top.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kralj" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kralj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="topc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\topc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

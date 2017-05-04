@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimpleTCP;
+using System.Windows.Forms;
 
 namespace Sah
 {
@@ -37,7 +38,9 @@ namespace Sah
                 Console.WriteLine(primljeno1);
                 if (primljeno1 == "0,0,0,0")
                     server.Broadcast(partija);
-                Figura.Instance().zameni(int.Parse(niz[5]), int.Parse(niz[6]), int.Parse(niz[1]), int.Parse(niz[2]));
+                Sah sahhhh = (Sah)Application.OpenForms["Sah"];
+                sahhhh.pasvaluec = 1;
+                    Figura.Instance().zameni(int.Parse(niz[5]), int.Parse(niz[6]), int.Parse(niz[1]), int.Parse(niz[2]));
                 if(niz[7]=="sahmat")
                 {
                     sahmat = "sahmat";

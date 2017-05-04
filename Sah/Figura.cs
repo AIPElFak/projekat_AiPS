@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sah
 {
@@ -15,39 +16,6 @@ namespace Sah
         static  string[,] pozicija = new string[11, 11];
         public Figura()
         {
-            //pozicija[1, 7] = "pB1";
-            //pozicija[2, 2] = "pB2";
-            //pozicija[3, 2] = "pB3";
-            //pozicija[4, 2] = "pB4";
-            //pozicija[5, 2] = "pB5";
-            //pozicija[6, 2] = "pB6";
-            //pozicija[7, 2] = "pB7";
-            //pozicija[8, 2] = "pB8";
-            //pozicija[1, 1] = "tB1";
-            //pozicija[8, 1] = "tB2";
-            //pozicija[2, 1] = "koB1";
-            //pozicija[7, 1] = "koB2";
-            //pozicija[3, 1] = "lB1";
-            //pozicija[6, 1] = "lB2";
-            //pozicija[4, 1] = "krB1";
-            //pozicija[5, 1] = "kB1";
-
-            //pozicija[1, 3] = "pC1";
-            //pozicija[2, 7] = "pC2";
-            //pozicija[3, 7] = "pC3";
-            //pozicija[4, 7] = "pC4";
-            //pozicija[5, 7] = "pC5";
-            //pozicija[6, 7] = "pC6";
-            //pozicija[7, 7] = "pC7";
-            //pozicija[8, 7] = "pC8";
-            //pozicija[1, 4] = "tC1";
-            //pozicija[8, 8] = "tC2";
-            //pozicija[2, 8] = "koC1";
-            //pozicija[7, 8] = "koC2";
-            //pozicija[3, 8] = "lC1";
-            //pozicija[6, 8] = "lC2";
-            //pozicija[4, 8] = "krC1";
-            //pozicija[5, 8] = "kC1";
             pozicija[0, 0] = null;
             //pozicija[0, 1] = "zKrB";
             //pozicija[0, 2] = "zKoB";
@@ -691,15 +659,28 @@ namespace Sah
         }
 
         string ss;
-        public string sss()
-        {
-            ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
-            try
+        //public string sss()
+        //{
+        //    ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
+        //    //try
+        //    //{
+        //    //    ss = Server.Instance().gg();
+        //    //    return ss;
+        //    //}
+        //    //catch
+        //    //{
+        //    //ss = Client.Instance().gg();
+        //    //return ss;
+        //    //}
+        //}
+        public string sss() { ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
+            Sah sahhhh = (Sah)Application.OpenForms["Sah"];
+            if (sahhhh.pasvaluec == 1)
             {
                 ss = Server.Instance().gg();
                 return ss;
             }
-            catch
+            else
             {
                 ss = Client.Instance().gg();
                 return ss;
