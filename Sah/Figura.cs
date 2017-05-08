@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sah
 {
@@ -10,52 +11,54 @@ namespace Sah
     {
         static Figura instace;
         int kolona, vrsta;
+        static int z = 0;
         string figura, novaFigura;
-        string[,] pozicija = new string[11, 11];
+        static  string[,] pozicija = new string[11, 11];
         public Figura()
         {
-            pozicija[1, 7] = "pB1";
-            pozicija[2, 2] = "pB2";
-            pozicija[3, 2] = "pB3";
-            pozicija[4, 2] = "pB4";
-            pozicija[5, 2] = "pB5";
-            pozicija[6, 2] = "pB6";
-            pozicija[7, 2] = "pB7";
-            pozicija[8, 2] = "pB8";
-            pozicija[1, 1] = "tB1";
-            pozicija[8, 1] = "tB2";
-            pozicija[2, 1] = "koB1";
-            pozicija[7, 1] = "koB2";
-            pozicija[3, 1] = "lB1";
-            pozicija[6, 1] = "lB2";
-            pozicija[4, 1] = "krB1";
-            pozicija[5, 1] = "kB1";
-
-            pozicija[1, 3] = "pC1";
-            pozicija[2, 7] = "pC2";
-            pozicija[3, 7] = "pC3";
-            pozicija[4, 7] = "pC4";
-            pozicija[5, 7] = "pC5";
-            pozicija[6, 7] = "pC6";
-            pozicija[7, 7] = "pC7";
-            pozicija[8, 7] = "pC8";
-            pozicija[1, 4] = "tC1";
-            pozicija[8, 8] = "tC2";
-            pozicija[2, 8] = "koC1";
-            pozicija[7, 8] = "koC2";
-            pozicija[3, 8] = "lC1";
-            pozicija[6, 8] = "lC2";
-            pozicija[4, 8] = "krC1";
-            pozicija[5, 8] = "kC1";
             pozicija[0, 0] = null;
-            pozicija[0, 1] = "zKrB";
-            pozicija[0, 2] = "zKoB";
-            pozicija[0, 3] = "zTB";
-            pozicija[0, 4] = "zLB";
-            pozicija[0, 5] = "zKrC";
-            pozicija[0, 6] = "zKoC";
-            pozicija[0, 7] = "zTC";
-            pozicija[0, 8] = "zLC";
+            //pozicija[0, 1] = "zKrB";
+            //pozicija[0, 2] = "zKoB";
+            //pozicija[0, 3] = "zTB";
+            //pozicija[0, 4] = "zLB";
+            //pozicija[0, 5] = "zKrC";
+            //pozicija[0, 6] = "zKoC";
+            //pozicija[0, 7] = "zTC";
+            //pozicija[0, 8] = "zLC";
+
+            if (z == 0)
+            {
+                string k;
+                k = sss();
+                int poz = 0;
+                string[] niz = k.Split(',');
+                for (int i = 1; i < 9; i++)
+                {
+                    for (int j = 1; j < 9; j++)
+                    {
+                        if (niz[poz] != "")
+                            pozicija[j, i] = niz[poz];
+                        poz++;
+                    }
+                }
+                z = 1;
+            }
+            else
+            {
+                string k;
+                k = sss1();
+                int poz = 0;
+                string[] niz = k.Split(',');
+                for (int i = 1; i < 9; i++)
+                {
+                    for (int j = 1; j < 9; j++)
+                    {
+                        if(niz[poz]!="")
+                        pozicija[j,i] = niz[poz];
+                        poz++;
+                    }
+                }
+            }
         }
         public static Figura Instance()
         {
@@ -137,7 +140,7 @@ namespace Sah
             if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "zKoC")
                 return "zKoC";
             if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "zTC")
-                return "zT";
+                return "zTC";
             if (pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta] == "zLC")
                 return "zLC";
             else return "0";
@@ -298,7 +301,7 @@ namespace Sah
                 }
                 else return "0";
             }
-            if (figura == "lB1" || figura == "lB2" || figura == "zLB" || figura=="zLC")
+            if (figura == "lB1" || figura == "lB2" || figura == "zLB" )
             {
                 Lovac l = new Lovac();
                 if (l.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
@@ -311,7 +314,7 @@ namespace Sah
                 }
                 else return "0";
             }
-            else if (figura == "lC1" || figura == "lC2")
+            else if (figura == "lC1" || figura == "lC2" || figura == "zLC")
             {
                 Lovac l = new Lovac();
                 if (l.pomeri(kolona, vrsta, kliknutaDrugaKolona, kliknutaDrugaVrsta, pozicija[kliknutaDrugaKolona, kliknutaDrugaVrsta]) == 1)
@@ -448,6 +451,7 @@ namespace Sah
             }
         public int nevalidanBeliPotezZaKralja(int k, int v)
         {
+            
             if (pozicija[k + 1, v + 1] == "pC1" || pozicija[k - 1, v + 1] == "pC1" || pozicija[k + 1, v + 1] == "pC2" || pozicija[k - 1, v + 1] == "pC2" ||
                 pozicija[k + 1, v + 1] == "pC3" || pozicija[k - 1, v + 1] == "pC3" || pozicija[k + 1, v + 1] == "pC4" || pozicija[k - 1, v + 1] == "pC4" ||
                 pozicija[k + 1, v + 1] == "pC5" || pozicija[k - 1, v + 1] == "pC5" || pozicija[k + 1, v + 1] == "pC6" || pozicija[k - 1, v + 1] == "pC6" ||
@@ -480,7 +484,7 @@ namespace Sah
                 }
                 for (int i = 2; ((k - i) > 0 && (v - i) > 0 && pozicija[k - i + 1, v - i + 1] == null); i++)
                 {
-                    if (pozicija[k - i, v - i] == "krC1" || pozicija[k - i, v - i] == "zKrC" || pozicija[k - i, v - i] == "lC1" || pozicija[k - i, v - i] == "lC2" || pozicija[k - i, v - i] == "zLC")
+                    if ( pozicija[k - i, v - i] == "krC1" || pozicija[k - i, v - i] == "zKrC" || pozicija[k - i, v - i] == "lC1" || pozicija[k - i, v - i] == "lC2" || pozicija[k - i, v - i] == "zLC")
                         return 0;
                     if (rtrnValC((k - i), (v - i)) != "0")
                         continue;
@@ -653,5 +657,157 @@ namespace Sah
                 return 1;
             }
         }
+
+        string ss;
+        //public string sss()
+        //{
+        //    ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
+        //    //try
+        //    //{
+        //    //    ss = Server.Instance().gg();
+        //    //    return ss;
+        //    //}
+        //    //catch
+        //    //{
+        //    //ss = Client.Instance().gg();
+        //    //return ss;
+        //    //}
+        //}
+        public string sss() { ss = "tB1,koB1,lB1,krB1,kB1,lB2,kB2,tB2,,,,,,,,,,,,,tC1,,,,,,,,,,,tB1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,lB1";
+            Sah sahhhh = (Sah)Application.OpenForms["Sah"];
+            if (sahhhh.pasvaluec == 1)
+            {
+                ss = Server.Instance().gg();
+                return ss;
+            }
+            else
+            {
+                ss = Client.Instance().gg();
+                return ss;
+            }
+        }
+        public string sss1()
+        {
+            ss = pozicija[1, 1] + "," + pozicija[2,1] + "," + pozicija[3,1] + "," + pozicija[4,1] + "," + pozicija[5,1] + "," + pozicija[6,1]
+                   + "," + pozicija[7,1] + "," + pozicija[8,1] + "," + pozicija[1,2] + "," + pozicija[2, 2] + "," + pozicija[3,2]
+                   + "," + pozicija[4,2] + "," + pozicija[5,2] + "," + pozicija[6,2] + "," + pozicija[7,2] + "," + pozicija[8,2] + "," + pozicija[1,3]
+                   + "," + pozicija[2,3] + "," + pozicija[3, 3] + "," + pozicija[4,3] + "," + pozicija[5,3] + "," + pozicija[6,3] + "," + pozicija[7,3]
+                   + "," + pozicija[8,3] + "," + pozicija[1,4] + "," + pozicija[2,4] + "," + pozicija[3,4] + "," + pozicija[4, 4] + "," + pozicija[5,4]
+                   + "," + pozicija[6,4] + "," + pozicija[7,4] + "," + pozicija[8,4] + "," + pozicija[1,5] + "," + pozicija[2,5] + "," + pozicija[3,5]
+                   + "," + pozicija[4,5] + "," + pozicija[5, 5] + "," + pozicija[6,5] + "," + pozicija[7,5] + "," + pozicija[8,5] + "," + pozicija[1,6]
+                   + "," + pozicija[2,6] + "," + pozicija[3,6] + "," + pozicija[4,6] + "," + pozicija[5,6] + "," + pozicija[6, 6] + "," + pozicija[7,6]
+                   + "," + pozicija[8,6] + "," + pozicija[1,7] + "," + pozicija[2,7] + "," + pozicija[3,7] + "," + pozicija[4,7] + "," + pozicija[5,7]
+                   + "," + pozicija[6,7] + "," + pozicija[7,7] + "," + pozicija[8,7] + "," + pozicija[1,8] + "," + pozicija[2,8]
+                   + "," + pozicija[3,8] + "," + pozicija[4,8] + "," + pozicija[5,8] + "," + pozicija[6,8] + "," + pozicija[7,8] + "," + pozicija[8, 8];
+            return ss;
+        }
+
+        public int mat(int v, int k)
+        {
+            int kolonak = kolona;
+            int vrstav = vrsta;
+            for (int i=1; i<=8; i++)
+            {
+                for(int j=1; j<=8; j++)
+                {
+                    for(int m=1; m<=8; m++)
+                    {
+                        for(int n=1; n<=8; n++)
+                        {
+                            kolona = i;
+                            vrsta = j;
+                            figura = pozicija[i, j];
+                            if (figura == "pB1" || figura == "pB2" || figura == "pB3" || figura == "pB4" || figura == "pB5" ||
+                                figura == "pB6" || figura == "pB7" || figura == "pB8" || figura == "tB1" || figura == "koB1" ||
+                                figura == "lB1" || figura == "krB1" || figura == "kB1" || figura == "lB2" || figura == "koB2" || 
+                                figura == "tB2" )
+                            {
+                                if (odrediFiguru(m, n) == "pB1" || odrediFiguru(m, n) == "pB7" || odrediFiguru(m, n) == "krB1" ||
+                                    odrediFiguru(m, n) == "pB2" || odrediFiguru(m, n) == "pB8" || odrediFiguru(m, n) == "kB1" ||
+                                    odrediFiguru(m, n) == "pB3" || odrediFiguru(m, n) == "tB1" || odrediFiguru(m, n) == "lB2" ||
+                                    odrediFiguru(m, n) == "pB4" || odrediFiguru(m, n) == "koB1" || odrediFiguru(m, n) == "koB2" ||
+                                    odrediFiguru(m, n) == "pB5" || odrediFiguru(m, n) == "lB1" || odrediFiguru(m, n) == "tB2" ||
+                                    odrediFiguru(m, n) == "pB6" || odrediFiguru(m, n) == "pC1" || odrediFiguru(m, n) == "pC7" || 
+                                    odrediFiguru(m, n) == "krC1" || odrediFiguru(m, n) == "pC2" || odrediFiguru(m, n) == "pC8" ||
+                                    odrediFiguru(m, n) == "kC1" || odrediFiguru(m, n) == "pC3" || odrediFiguru(m, n) == "tC1" ||
+                                    odrediFiguru(m, n) == "lC2" || odrediFiguru(m, n) == "pC4" || odrediFiguru(m, n) == "koC1" || 
+                                    odrediFiguru(m, n) == "koC2" || odrediFiguru(m, n) == "pC5" || odrediFiguru(m, n) == "lC1" ||
+                                    odrediFiguru(m, n) == "tC2" || odrediFiguru(m, n) == "pC6")
+                                {
+                                    if (napadnutBeliKralj(m, n) == 1  )
+                                    {
+                                        if (i != m || j != n)
+                                        {
+                                            figura = pozicija[v, k];
+                                            kolona = kolonak;
+                                            vrsta = vrstav;
+                                            return 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            kolona = kolonak;
+            vrsta = vrstav;
+            return 0;
+        }
+
+        public int mat1(int v, int k)
+        {
+            int kolonak = kolona;
+            int vrstav = vrsta;
+            for (int i = 1; i <= 8; i++)
+            {
+                for (int j = 1; j <= 8; j++)
+                {
+                    for (int m = 1; m <= 8; m++)
+                    {
+                        for (int n = 1; n <= 8; n++)
+                        {
+                            kolona = i;
+                            vrsta = j;
+                            figura = pozicija[i, j];
+                            if (figura == "pC1" || figura == "pC2" || figura == "pC3" || figura == "pC4" || figura == "pC5" ||
+                                figura == "pC6" || figura == "pC7" || figura == "pC8" || figura == "tC1" || figura == "koC1" ||
+                                figura == "lC1" || figura == "krC1" || figura == "kC1" || figura == "lC2" || figura == "koC2" ||
+                                figura == "tC2")
+                            {
+                                if (odrediFiguru(m, n) == "pC1" || odrediFiguru(m, n) == "pC7" ||
+                                    odrediFiguru(m, n) == "krC1" || odrediFiguru(m, n) == "pC2" || odrediFiguru(m, n) == "pC8" ||
+                                    odrediFiguru(m, n) == "kC1" || odrediFiguru(m, n) == "pC3" || odrediFiguru(m, n) == "tC1" ||
+                                    odrediFiguru(m, n) == "lC2" || odrediFiguru(m, n) == "pC4" || odrediFiguru(m, n) == "koC1" ||
+                                    odrediFiguru(m, n) == "koC2" || odrediFiguru(m, n) == "pC5" || odrediFiguru(m, n) == "lC1" ||
+                                    odrediFiguru(m, n) == "tC2" || odrediFiguru(m, n) == "pC6" ||
+                                    odrediFiguru(m, n) == "pB1" || odrediFiguru(m, n) == "pB7" || odrediFiguru(m, n) == "krB1" ||
+                                    odrediFiguru(m, n) == "pB2" || odrediFiguru(m, n) == "pB8" || odrediFiguru(m, n) == "kB1" ||
+                                    odrediFiguru(m, n) == "pB3" || odrediFiguru(m, n) == "tB1" || odrediFiguru(m, n) == "lB2" ||
+                                    odrediFiguru(m, n) == "pB4" || odrediFiguru(m, n) == "koB1" || odrediFiguru(m, n) == "koB2" ||
+                                    odrediFiguru(m, n) == "pB5" || odrediFiguru(m, n) == "lB1" || odrediFiguru(m, n) == "tB2" ||
+                                    odrediFiguru(m, n) == "pB6")
+                                {
+                                    if (napadnutCrniKralj(m, n) == 1)
+                                    {
+                                        if (i != m || j != n)
+                                        {
+                                            figura = pozicija[v, k];
+                                            kolona = kolonak;
+                                            vrsta = vrstav;
+                                            return 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            kolona = kolonak;
+            vrsta = vrstav;
+            return 0;
+        }
+
     }
 }

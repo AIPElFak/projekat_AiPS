@@ -16,7 +16,7 @@ namespace Sah
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sah());
+            Application.Run(new Pocetak());
         }
     }
 }
